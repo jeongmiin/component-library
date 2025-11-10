@@ -1,0 +1,166 @@
+:root{
+  --wh: #ffffff;
+  --bk: #000000;
+
+  --gray-50: #F8F8FA;
+  --gray-100: #E9E9EE;
+  --gray-200: #DEDFE6;
+  --gray-300: #CFD0DA;
+  --gray-400: #B7B9C8; 
+  --gray-500: #8B8C9A;
+  --gray-600: #696B79;
+  --gray-700: #565868;
+  --gray-800: #353C48;
+  --gray-900: #292F38;
+  --gray-950: #1F242A;
+
+  --red-50: #FFF5F5;
+  --red-100: #FFDDDD;
+  --red-200: #FFC4C4;
+  --red-300: #FFA8A8;
+  --red-400: #FF8080;
+  --red-500: #FF6868;
+  --red-600: #FF4242;
+  --red-700: #CE3535;
+  --red-800: #A02929 ;
+  --red-900: #7C2020;
+  --red-950: #5F1818;
+
+  --orange-50: #FFF4EF;
+  --orange-100: #FFEAE4;
+  --orange-200: #FACABB;
+  --orange-300: #F8B09A;
+  --orange-400: #FF8A54;
+  --orange-500: #FF6E2B;
+  --orange-600: #F05323;
+  --orange-700: #DA4C20;
+  --orange-800: #AA3B19;
+  --orange-900: #842E13;
+  --orange-950: #65230F;
+
+  --blue-50: #F4F8FF;
+  --blue-100: #E9F0FD;
+  --blue-200: #BBD1F8;
+  --blue-300: #9ABAF5;
+  --blue-400: #6C9BF1;
+  --blue-500: #4A8AFF;
+  --blue-600: #427EFF;
+  --blue-700: #2160D5;
+  --blue-800: #1A4BA6;
+  --blue-900: #143A81;
+  --blue-950: #0F2D62;
+
+  --yellow-50: #FFFBED;
+  --yellow-100: #FFF4D2;
+  --yellow-200: #FFEAAC;
+  --yellow-300: #FFE188;
+  --yellow-400: #FFDB71;
+  --yellow-500: #FFD24E;
+  --yellow-600: #E8BF46;
+  --yellow-700: #B59537;
+  --yellow-800: #8C742A;
+  --yellow-900: #6B5820;
+  --yellow-950: #463810;
+
+  /* ==================== */
+  /* primary color    */
+  /* ==================== */
+  --primary-50: var(--orange-50);
+  --primary-100: var(--blue-100);
+  --primary-200: var(--blue-200);
+  --primary-300: var(--blue-300);
+  --primary-400: var(--blue-400);
+  --primary-500: var(--blue-500);
+  --primary-600: var(--blue-600);
+  --primary-700: var(--blue-700);
+  --primary-800: var(--blue-800);
+  --primary-900: var(--blue-900);
+  --primary-950: var(--blue-950);
+
+  --surface-50: var(--gray-50);
+  --surface-100: var(--gray-100);
+  --surface-200: var(--gray-200);
+  --surface-300: var(--gray-300);
+  --surface-400: var(--gray-400);
+  --surface-500: var(--gray-500);
+  --surface-600: var(--gray-600);
+  --surface-700: var(--gray-700);
+  --surface-800: var(--gray-800);
+  --surface-900: var(--gray-900);
+  --surface-950: var(--gray-950);
+
+
+  /* overlay */
+  --shadow-primary: 0px 4px 10px 0px rgba(0,0,0,0.08);
+
+  /* bg */
+  --bg-surface: var(--surface-50);
+  --bg-primary: var(--wh);
+  --bg-alt-primary: var(--surface-300);
+  --bg-secondary: var(--surface-100);
+  --bg-pt-primary: var(--primary-500);
+  --bg-pt-alt-primary: var(--primary-600);
+  --bg-pt-secondary: var(--primary-50);
+  --bg-pt-tertiary: var(--primary-100);
+
+  /* text */
+  --color-surface: var(--surface-950);
+  --color-alt-surface: var(--surface-50);
+  --color-primary: var(--surface-800);
+  --color-alt-primary: var(--wh);
+  --color-secondary: var(--surface-400);
+  --color-alt-secondary: var(--surface-500);
+  --color-tertiary: var(--surface-700);
+  --color-pt-primary: var(--primary-500);
+  --color-pt-secondary: var(--primary-600);
+
+  /* border */
+  --border-primary: var(--surface-100);
+  --border-alt-primary: var(--surface-50);
+  --border-secondary: var(--surface-950);
+  --border-alt-secondary: var(--surface-200);
+  --border-tertiary: var(--surface-300);
+  --border-pt-primary: var(--primary-500);
+  --border-pt-secondary: var(--primary-400);
+  --border-pt-tertiary: var(--primary-200);
+
+  /* icon fill */
+  --icon-surface: var(--surface-500);
+  --icon-primary:  var(--surface-400);
+  --icon-pt-primary: var(--primary-500);
+  --icon-secondary: var(--wh);
+  --icon-tertiary: var(--surface-950);
+
+  /* Text */
+  --text-4xl: 2.375em; /* 36px */
+  --text-3xl: 2em; /* 32px */
+  --text-2xl: 1.75em; /* 28px */
+  --text-xl: 1.5em; /* 24px */
+  --text-lg: 1.25em; /* 20px */
+  --text-md: 1.125em; /* 18px */
+  --text-base: 16px; /* 16px */
+  --text-sm: max(13px, 0.875em); /* 14px */
+  --text-xs: max(12px, 0.75em); /* 12px */
+  --text-2xs: max(10px, 0.625em); /* 10px */
+
+  /* font-weight */
+  --font-thin: 100;
+  --font-extraLight: 200;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+
+  /* border-radius */
+  --rounded-xs: 4px;
+  --rounded-sm: 6px;
+  --rounded-md: 8px;
+  --rounded-lg: 1em;
+  --rounded-xl: 1.5em;
+  --rounded-circle: 50%;
+  --rounded-full: 10em;
+
+}

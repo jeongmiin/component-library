@@ -1,0 +1,125 @@
+:root{
+  --font-family: 'Pretendard',sans-serif;
+
+  /* login bg */
+  --login-top-bg: var(--primary-100);
+  --login-middle-bg: var(--primary-50);
+  --login-bottom-bg: var(--surface-50);
+  /* gnb bg */
+  --gnb-active-bg: var(--primary-50);
+  /* scroll bar */
+  --scroll-bar: var(--surface-300); 
+  --scroll-bar-hover: var(--surface-400); 
+  --scroll-bar-bg: var(--surface-50); 
+
+
+  /* db section  여백 */
+  --grid-primary: 0.75em; /* 12px */
+  --grid-alt-primary:  1%; /* 가변의 1.25em 크기 */
+  --grid-secondary: 2.5em;
+  --grid-tertiary: 1.5em;
+
+  /* 여백 */
+  --space-4xs: 2px;
+  --space-3xs: 4px;
+  --space-2xs: 6px;
+  --space-xs: 8px; /* 8px */
+  --space-sm: 0.625em; /* 10px */
+  --space-md: 0.75em; /* 12px */
+  --space-lg: 0.875em; /* 14px */
+  --space-xl: 1em; /* 16px */
+  --space-2xl: 1.25em; /* 20px */
+  --space-3xl: 1.5em; /* 24px */
+  --space-4xl: 2em; /* 32px */
+
+  /* ==================== */
+  /* Button Components    */
+  /* ==================== */
+  --btn-surface: var(--wh);
+  --btn-alt-surface: var(--surface-100);
+  --btn-primary: var(--surface-900);
+  --btn-alt-primary: var(--surface-200);
+  --btn-secondary: var(--surface-700);
+  --btn-alt-secondary: var(--surface-50);
+  --btn-tertiary:var(--surface-800);
+  --btn-alt-tertiary:var(--surface-600);
+  --btn-pt-primary: var(--primary-500);
+  --btn-pt-alt-primary: var(--primary-50);
+  --btn-pt-secondary: var(--primary-600);
+  --btn-pt-alt-secondary: var(--primary-200);
+  --btn-pt-tertiary: var(--primary-100);
+  --btn-pt-alt-tertiary: var(--primary-400);
+
+
+  /* table */
+  --table-surface: var(--wh);
+  --table-bg-primary: var(--surface-50);
+  --table-hover-bg: var(--primary-50);
+  --table-hover-color: var(--primary-600);
+  --table-border:var(--surface-100);
+  --table-space-sm: 6px; 
+  --table-space-md: 8px; 
+  --table-space: 7px;
+  
+  --table-point00: var(--surface-800); 
+  --table-point01: var(--primary-600);
+  --table-point02: var(--primary-500);
+  --table-point03: var(--primary-100);
+  --table-point04: var(--primary-50);
+  --table-point05: var(--red-600); 
+  --table-point06: var(--red-100); 
+  --table-point07: var(--blue-600); 
+  --table-point08: var(--blue-100); 
+  --table-point09: var(--yellow-100); 
+  
+  /* ==================== */
+  /* Input Components     */
+  /* ==================== */
+  --input-bg: var(--wh);
+  --input-label-color: var(--surface-700);
+  --input-color: var(--surface-600);
+  --input-border: var(--surface-200);
+  --input-focus-border: var(--primary-500);
+  --input-placeholder: var(--surface-400);
+
+  /* checkbox */
+  --ckbox-bg: var(--wh);
+  --ckbox-border: var(--surface-300);
+  --checked-bg: var(--primary-500);
+  --checked-border: var(--primary-500);
+
+  /* switch */
+  --switch-bg: var(--surface-400);
+  --switch-checked-bg: var(--primary-400);
+
+  /* radio */
+  --radio-btn-bg: var(--wh);
+  --radio-btn-border: var(--surface-300);
+  --radio-checked-bg: var(--primary-500);
+  --radio-checked-border: var(--primary-500);
+
+  /* disabled */
+  --disabled-bg: var(--surface-200);
+  --disabled-color: var(--surface-500);
+  --disabled-border: var(--surface-300);
+
+  /* spinners */
+  --spinners-surface:var(--surface-200);
+  --spinners-primary:var(--primary-500);
+
+
+   /* Height 변수 */
+  --height-input-sm: 32px;
+  --height-input-md: 2.29em;
+  --height-input-lg: 2.85em;
+  
+  /* Width 변수 */
+  --width-search-field: 340px;
+  --width-select-min: 150px;
+  --width-datepicker: 130px;
+  
+  /* Padding 미세 조정 */
+  --space-5px: 5px;
+  --space-7px: 7px;
+
+}
