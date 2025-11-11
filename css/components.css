@@ -29,50 +29,53 @@ input[type="button"].btn_base{height: auto !important;}
 .btn_base.min_w_100{min-width: 100px;}
 
 /* Primary - 가장 중요한 액션 (CTA) */
-.btn_base.primary{background-color: var(--btn-pt-primary); color: var( --btn-surface);}
-.btn_base.primary i{color: var(--btn-surface);}
-.btn_base.primary:hover{background-color: var(--btn-pt-secondary);}
-.btn_base.primary:hover i{color: var(--btn-surface);}
+.btn_base.primary{background-color: var(--btn-primary-bg); color: var(--btn-primary-text);}
+.btn_base.primary i{color: var(--btn-primary-text);}
+.btn_base.primary:hover{background-color: var(--btn-primary-bg-hover);}
+.btn_base.primary:hover i{color: var(--btn-primary-text);}
 
 /* Secondary - 보조 액션, outline 스타일 */
-.btn_base.secondary{background-color: var(--btn-surface); border-color: var(--btn-pt-alt-secondary); color: var(--btn-pt-secondary);}
-.btn_base.secondary i{color: var(--btn-pt-primary);}
-.btn_base.secondary:hover{background-color: var(--btn-pt-alt-primary);}
-.btn_base.secondary:hover i{color: var(--btn-pt-primary);}
+.btn_base.secondary{background-color: var(--btn-secondary-bg); border-color: var(--btn-secondary-border); color: var(--btn-secondary-text);}
+.btn_base.secondary i{color: var(--btn-secondary-text);}
+.btn_base.secondary:hover{background-color: var(--btn-secondary-bg-hover);}
+.btn_base.secondary:hover i{color: var(--btn-secondary-text);}
 
 /* Tertiary - 세 번째 우선순위 */
-.btn_base.tertiary{background-color: var(--btn-surface); border-color: var(--btn-alt-primary); color: var(--btn-secondary);}
-.btn_base.tertiary:hover{ background-color: var(--btn-surface); border-color: var(--btn-pt-alt-tertiary); color: var(--btn-pt-secondary);}
-.btn_base.tertiary:hover i{color: var(--btn-pt-secondary);}
+.btn_base.tertiary{background-color: var(--btn-tertiary-bg); border-color: var(--btn-tertiary-border); color: var(--btn-tertiary-text);}
+.btn_base.tertiary:hover{background-color: var(--btn-tertiary-bg-hover); border-color: var(--btn-tertiary-border-hover); color: var(--btn-tertiary-text-hover);}
+.btn_base.tertiary:hover i{color: var(--btn-tertiary-text-hover);}
 
 /* Inverse - 반전 스타일 (어두운 배경) */
-.btn_base.inverse{background-color: var(--btn-primary); color: var(--btn-surface);}
-.btn_base.inverse:hover{background-color: var(--bk);}
-.btn_base.inverse i{color: var(--btn-surface) !important;}
-.btn_base.inverse:hover i{color: var(--btn-surface) !important;}
+.btn_base.inverse{background-color: var(--btn-inverse-bg); color: var(--btn-inverse-text);}
+.btn_base.inverse:hover{background-color: var(--btn-inverse-bg-hover);}
+.btn_base.inverse i{color: var(--btn-inverse-text) !important;}
+.btn_base.inverse:hover i{color: var(--btn-inverse-text) !important;}
 
 /* Neutral - 중립적인 액션 */
-.btn_base.neutral{background-color: var(--btn-secondary); color: var(--btn-surface);}
+.btn_base.neutral{background-color: var(--btn-neutral-bg); color: var(--btn-neutral-text);}
 .btn_base.neutral i,
-.btn_base.neutral:hover i{color: var(--btn-surface);}
-.btn_base.neutral:hover{background-color: var(--btn-tertiary);}
+.btn_base.neutral:hover i{color: var(--btn-neutral-text);}
+.btn_base.neutral:hover{background-color: var(--btn-neutral-bg-hover);}
 
 /* Subtle - 시각적 강조도가 낮은 버튼 */
-.btn_base.subtle{background-color: var(--btn-alt-secondary); border-color: var(--btn-alt-primary); color: var(--btn-alt-tertiary);}
+.btn_base.subtle{background-color: var(--btn-subtle-bg); border-color: var(--btn-subtle-border); color: var(--btn-subtle-text);}
 .btn_base.subtle i,
-.btn_base.subtle:hover i{color: var(--btn-alt-tertiary);}
-.btn_base.subtle:hover{background-color: var(--btn-alt-surface);}
+.btn_base.subtle:hover i{color: var(--btn-subtle-text);}
+.btn_base.subtle:hover{background-color: var(--btn-subtle-bg-hover);}
 
 /* Ghost - 보더/배경 없음 */
-.btn_base.ghost{background-color: transparent; border: 0;}
-.btn_base.ghost:hover,
-.btn_base.ghost:hover i{color: var(--btn-pt-primary);}
+.btn_base.ghost{background-color: var(--btn-ghost-bg); color: var(--btn-ghost-text); border: 0;}
+.btn_base.ghost i{color: var(--btn-ghost-text);}
+.btn_base.ghost:hover{background-color: var(--btn-ghost-bg-hover); color: var(--btn-ghost-text-hover);}
+.btn_base.ghost:hover i{color: var(--btn-ghost-text-hover);}
 
 /* Link - 텍스트 링크 스타일 */
-.btn_base.link{background-color: transparent; padding: 0 !important; text-decoration: underline !important;}
-.btn_base.link:hover{color: var(--blue-700);}
+.btn_base.link{background-color: var(--btn-link-bg); color: var(--btn-link-text); padding: 0 !important; text-decoration: underline !important;}
+.btn_base.link i{color: var(--btn-link-text);}
+.btn_base.link:hover{color: var(--btn-link-text-hover);}
+.btn_base.link:hover i{color: var(--btn-link-text-hover);}
 .btn_base:disabled,
-.btn_base:disabled:hover{background-color: var(--disabled-bg); color: var(--disabled-color); border-color: var(--disabled-border); cursor: not-allowed;}
+.btn_base:disabled:hover{background-color: var(--disabled-bg); color: var(--disabled-text); border-color: var(--disabled-border); cursor: not-allowed;}
 
 
 /* ==================== */
@@ -80,12 +83,12 @@ input[type="button"].btn_base{height: auto !important;}
 /* ==================== */
 /* 기본 Input */
 .input_field { position: relative; width: 100%; margin-bottom: var(--space-md, 1em);}
-.input_label { font-size: var(--text-sm); color: var(--input-label-color); display: block; margin-bottom: var(--space-2xs, 0.25em);}
-.input_base { width: 100%; border: 1px solid var(--input-border); padding: 0.5em 0.75em; border-radius: var(--rounded-xs); outline: none; box-sizing: border-box; font-size: var(--text-base); color: var(--input-color); background-color: var(--input-bg); transition: all 0.2s; height: var(--height-input-md);}
+.input_label { font-size: var(--text-sm); color: var(--input-label); display: block; margin-bottom: var(--space-2xs, 0.25em);}
+.input_base { width: 100%; border: 1px solid var(--input-border); padding: 0.5em 0.75em; border-radius: var(--rounded-xs); outline: none; box-sizing: border-box; font-size: var(--text-base); color: var(--input-text); background-color: var(--input-bg); transition: all 0.2s; height: var(--height-input-md);}
 .input_base::placeholder { color: var(--input-placeholder); font-size: var(--text-sm); text-decoration: none;}
 .input_base:focus::placeholder { color: transparent;}
-.input_base:focus { border-color: var(--input-focus-border);}
-.input_base:disabled { background-color: var(--disabled-bg); color: var(--disabled-color); cursor: not-allowed;}
+.input_base:focus { border-color: var(--input-border-focus);}
+.input_base:disabled { background-color: var(--disabled-bg); color: var(--disabled-text); cursor: not-allowed;}
 /* Input 사이즈 */
 .input_base.sm { height: var(--height-input-sm); font-size: var(--text-xs); padding: 0.25em 0.5em;}
 .input_base.md { height: var(--height-input-md);}
@@ -93,7 +96,7 @@ input[type="button"].btn_base{height: auto !important;}
 
 /* bottom_line 스타일 */
 .input_base.bottom_line { border: 0; border-bottom: 1px solid var(--input-border); border-radius: 0; padding-left: 0; padding-right: 0;}
-.input_base.bottom_line:focus { border-bottom-color: var(--input-focus-border);}
+.input_base.bottom_line:focus { border-bottom-color: var(--input-border-focus);}
 /* Field 정보 메시지 */
 .field_message { display: none; font-size: var(--text-xs); position: absolute; top: calc(100% + 3px); left: 0; width: 100%;}
 .input_field:has(.input_base:focus) .field_message { display: block;}
@@ -103,11 +106,11 @@ input[type="button"].btn_base{height: auto !important;}
 /* Label with button */
 .input_label.with_action { display: flex; align-items: center; justify-content: space-between;}
 /* Floating Label */
-.input_float { width: 100%; padding: 0.5em 0.75em; border: 1px solid var(--input-border); border-radius: var(--rounded-xs); outline: none; transition: all 0.2s; font-size: var(--text-base); color: var(--input-color); background-color: var(--input-bg);}
-.input_float:focus { border-color: var(--input-focus-border);}
+.input_float { width: 100%; padding: 0.5em 0.75em; border: 1px solid var(--input-border); border-radius: var(--rounded-xs); outline: none; transition: all 0.2s; font-size: var(--text-base); color: var(--input-text); background-color: var(--input-bg);}
+.input_float:focus { border-color: var(--input-border-focus);}
 /* Filled 스타일 Floating Label */
 .input_float.filled { background-color: var(--bg-secondary); border: none; border-bottom: 2px solid var(--input-border); border-radius: 0; padding: 1.7em 0.75em 0.5em;}
-.input_float.filled:focus { border-bottom-color: var(--input-focus-border);}
+.input_float.filled:focus { border-bottom-color: var(--input-border-focus);}
 .input_float:focus ~ .float_label,
 .input_float:not(:placeholder-shown) ~ .float_label { font-size: var(--text-xs); color: var(--color-pt-primary); top: -10px; transform: translateY(0); background-color: var(--input-bg); padding: 0 4px;}
 .float_label { font-size: var(--text-sm); position: absolute; left: 0.75em; color: var(--input-placeholder); transition: all 0.2s; pointer-events: none; top: 50%; transform: translateY(-50%);}
@@ -125,25 +128,25 @@ select.input_base { appearance: none; background-image: url("data:image/svg+xml,
 /* Checkbox & Radio    */
 /* ==================== */
 .check_field { position: relative; display: flex; align-items: anchor-center; gap: var(--space-xs, 0.5em);}
-.check_label { cursor: pointer; font-size: var(--text-sm); color: var(--input-label-color); flex: 1; user-select: none;}
+.check_label { cursor: pointer; font-size: var(--text-sm); color: var(--input-label); flex: 1; -webkit-user-select: none; user-select: none;}
 
 /* Checkbox */
-.check_field input[type="checkbox"] { -webkit-appearance: none; appearance: none; position: relative; width: 1.25em; height: 1.25em; vertical-align: middle; cursor: pointer; outline: none; background-color: var(--ckbox-bg); border: 1px solid var(--ckbox-border); padding: 0; border-radius: var(--rounded-xs); transition: all 0.2s}
+.check_field input[type="checkbox"] { -webkit-appearance: none; appearance: none; position: relative; width: 1.25em; height: 1.25em; vertical-align: middle; cursor: pointer; outline: none; background-color: var(--checkbox-bg); border: 1px solid var(--checkbox-border); padding: 0; border-radius: var(--rounded-xs); transition: all 0.2s}
 .check_field input[type="checkbox"].check_base::before { content: "\e182"; font-family: "Phosphor"; font-size: 0.875em; font-weight: bold; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: transparent; transition: color 0.2s;}
-.check_field input[type="checkbox"].check_base:hover { border-color: var(--checked-border);}
-.check_field input[type="checkbox"].check_base:checked { background-color: var(--checked-bg); border-color: var(--checked-border);}
+.check_field input[type="checkbox"].check_base:hover { border-color: var(--checkbox-checked-border);}
+.check_field input[type="checkbox"].check_base:checked { background-color: var(--checkbox-checked-bg); border-color: var(--checkbox-checked-border);}
 .check_field input[type="checkbox"].check_base:checked::before { color: var(--wh);}
 .check_field input[type="checkbox"].check_base:disabled { background-color: var(--disabled-bg); border-color: var(--disabled-border); cursor: not-allowed; opacity: 0.6;}
-.check_field:has(input[type="checkbox"].check_base:disabled) .check_label { cursor: not-allowed; color: var(--disabled-color);}
+.check_field:has(input[type="checkbox"].check_base:disabled) .check_label { cursor: not-allowed; color: var(--disabled-text);}
 
 /* Radio Button */
-.check_field input[type="radio"] { -webkit-appearance: none; appearance: none; position: relative; width: 1.25em; height: 1.25em; vertical-align: middle; cursor: pointer; outline: none; background-color: var(--radio-btn-bg); border: 1px solid var(--radio-btn-border); padding: 0; border-radius: var(--rounded-circle); transition: all 0.2s;}
+.check_field input[type="radio"] { -webkit-appearance: none; appearance: none; position: relative; width: 1.25em; height: 1.25em; vertical-align: middle; cursor: pointer; outline: none; background-color: var(--radio-bg); border: 1px solid var(--radio-border); padding: 0; border-radius: var(--rounded-circle); transition: all 0.2s;}
 .check_field input[type="radio"]::before { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; width: 0.625em; height: 0.625em; border-radius: var(--rounded-circle); transition: background-color 0.2s;}
 .check_field input[type="radio"]:hover { border-color: var(--radio-checked-border);}
 .check_field input[type="radio"]:checked { border-color: var(--radio-checked-border);}
 .check_field input[type="radio"]:checked::before { background-color: var(--radio-checked-bg);}
 .check_field input[type="radio"]:disabled { background-color: var(--disabled-bg); border-color: var(--disabled-border); cursor: not-allowed; opacity: 0.6;}
-.check_field:has(input[type="radio"]:disabled) .check_label { cursor: not-allowed; color: var(--disabled-color);}
+.check_field:has(input[type="radio"]:disabled) .check_label { cursor: not-allowed; color: var(--disabled-text);}
 /* 크기 */
 .check_field input.check_base.sm{width: 1.125em; height: 1.125em;}
 .check_field input[type="checkbox"].check_base.sm::before{font-size: 0.55em;}
@@ -162,21 +165,21 @@ select.input_base { appearance: none; background-image: url("data:image/svg+xml,
 .switch_control { position: relative; display: inline-block; width: 2.5em; height: 1.25em; min-width: 2.5em;}
 .switch_control input { display: none;}
 .switch_track { position: absolute; top: 0; left: 0; height: 100%; width: 100%; border-radius: var(--rounded-full); background-color: var(--switch-bg); transition: background-color 0.2s ease-in; cursor: pointer;}
-.switch_track::after { content: ""; position: absolute; right: calc(100% - 1em - 2px); top: 50%; transform: translateY(-50%); width: 1em; height: 1em; border-radius: var(--rounded-circle); background-color: var(--wh); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); transition: all 0.2s;}
+.switch_track::after { content: ""; position: absolute; right: calc(100% - 1em - 2px); top: 50%; transform: translateY(-50%); width: 1em; height: 1em; border-radius: var(--rounded-circle); background-color: var(--switch-thumb-bg); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); transition: all 0.2s;}
 .switch_control input:checked ~ .switch_track { background-color: var(--switch-checked-bg);}
 .switch_control input:checked ~ .switch_track::after { right: 3px;}
-.switch_control input:disabled ~ .switch_track { opacity: 0.4; cursor: not-allowed;}
-.check_field.switch:has(input:disabled) .check_label { cursor: not-allowed; color: var(--disabled-color);}
+.switch_control input:disabled ~ .switch_track { cursor: not-allowed; background-color: var(--disabled-bg);}
+.check_field.switch:has(input:disabled) .check_label { cursor: not-allowed; color: var(--disabled-text);}
 
 /* ==================== */
 /* Chips (Box Checkbox & Radio) */
 /* ==================== */
 .chip_field { position: relative; display: inline-flex;}
 .chip_field input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0;}
-.chip_label { display: inline-flex; align-items: center; gap: 0.5em; padding: 0.5em 1em; border: 1px solid var(--ckbox-border); border-radius: var(--rounded-md); background-color: var(--ckbox-bg); color: var(--input-color); font-size: var(--text-sm); cursor: pointer; transition: all 0.2s; user-select: none;}
-.chip_label:hover { border-color: var(--checked-border); background-color: var(--bg-pt-secondary);}
-.chip_field input[type="checkbox"]:checked ~ .chip_label { background-color: var(--checked-bg); border-color: var(--checked-border); color: var(--wh);}
-.chip_field input[type="checkbox"]:disabled ~ .chip_label { background-color: var(--disabled-bg); border-color: var(--disabled-border); color: var(--disabled-color); cursor: not-allowed; opacity: 0.6;}
+.chip_label { display: inline-flex; align-items: center; gap: 0.5em; padding: 0.5em 1em; border: 1px solid var(--chip-border); border-radius: var(--rounded-md); background-color: var(--chip-bg); color: var(--chip-text); font-size: var(--text-sm); cursor: pointer; transition: all 0.2s; -webkit-user-select: none; user-select: none;}
+.chip_label:hover { border-color: var(--chip-border-hover); background-color: var(--chip-bg-hover);}
+.chip_field input[type="checkbox"]:checked ~ .chip_label { background-color: var(--chip-checked-bg); border-color: var(--chip-checked-border); color: var(--chip-checked-text);}
+.chip_field input[type="checkbox"]:disabled ~ .chip_label { background-color: var(--disabled-bg); border-color: var(--disabled-border); color: var(--disabled-text); cursor: not-allowed; opacity: 0.6;}
 /* Chip with icon */
 .chip_label i { font-size: 1em; transition: opacity 0.2s;}
 .chip_field input[type="checkbox"]:not(:checked) ~ .chip_label i.ph-check { display: none;}
@@ -186,8 +189,8 @@ select.input_base { appearance: none; background-image: url("data:image/svg+xml,
 
 /* Radio Chip - 라디오 버튼 스타일 Chips */
 .chip_field input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0;}
-.chip_field input[type="radio"]:checked ~ .chip_label { background-color: var(--checked-bg); border-color: var(--checked-border); color: var(--wh);}
-.chip_field input[type="radio"]:disabled ~ .chip_label { background-color: var(--disabled-bg); border-color: var(--disabled-border); color: var(--disabled-color); cursor: not-allowed; opacity: 0.6;}
+.chip_field input[type="radio"]:checked ~ .chip_label { background-color: var(--chip-checked-bg); border-color: var(--chip-checked-border); color: var(--chip-checked-text);}
+.chip_field input[type="radio"]:disabled ~ .chip_label { background-color: var(--disabled-bg); border-color: var(--disabled-border); color: var(--disabled-text); cursor: not-allowed; opacity: 0.6;}
 .chip_field input[type="radio"]:not(:checked) ~ .chip_label i.ph-check { display: none;}
 .chip_field input[type="radio"]:checked ~ .chip_label i.ph-check { display: inline-block;}
 

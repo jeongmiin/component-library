@@ -35,20 +35,43 @@
   /* ==================== */
   /* Button Components    */
   /* ==================== */
-  --btn-surface: var(--wh);
-  --btn-alt-surface: var(--surface-100);
-  --btn-primary: var(--surface-900);
-  --btn-alt-primary: var(--surface-200);
-  --btn-secondary: var(--surface-700);
-  --btn-alt-secondary: var(--surface-50);
-  --btn-tertiary:var(--surface-800);
-  --btn-alt-tertiary:var(--surface-600);
-  --btn-pt-primary: var(--primary-500);
-  --btn-pt-alt-primary: var(--primary-50);
-  --btn-pt-secondary: var(--primary-600);
-  --btn-pt-alt-secondary: var(--primary-200);
-  --btn-pt-tertiary: var(--primary-100);
-  --btn-pt-alt-tertiary: var(--primary-400);
+  --btn-primary-bg: var(--primary-500);
+  --btn-primary-bg-hover: var(--primary-600);
+  --btn-primary-text: var(--wh);
+
+  --btn-secondary-bg: var(--wh);
+  --btn-secondary-bg-hover: var(--primary-50);
+  --btn-secondary-text: var(--primary-600);
+  --btn-secondary-border: var(--primary-200);
+
+  --btn-tertiary-bg: var(--wh);
+  --btn-tertiary-bg-hover: var(--wh);
+  --btn-tertiary-text: var(--surface-600);
+  --btn-tertiary-text-hover: var(--primary-600);
+  --btn-tertiary-border: var(--surface-200);
+  --btn-tertiary-border-hover: var(--primary-400);
+
+  --btn-inverse-bg: var(--surface-900);
+  --btn-inverse-bg-hover: var(--bk);
+  --btn-inverse-text: var(--wh);
+
+  --btn-neutral-bg: var(--surface-700);
+  --btn-neutral-bg-hover: var(--surface-800);
+  --btn-neutral-text: var(--wh);
+
+  --btn-subtle-bg: var(--surface-50);
+  --btn-subtle-bg-hover: var(--surface-100);
+  --btn-subtle-text: var(--surface-600);
+  --btn-subtle-border: var(--surface-200);
+
+  --btn-ghost-bg: transparent;
+  --btn-ghost-bg-hover: transparent;
+  --btn-ghost-text: var(--surface-600);
+  --btn-ghost-text-hover: var(--primary-500);
+
+  --btn-link-bg: transparent;
+  --btn-link-text: var(--primary-500);
+  --btn-link-text-hover: var(--primary-700);
 
 
   /* table */
@@ -75,37 +98,49 @@
   /* ==================== */
   /* Input Components     */
   /* ==================== */
+  /* Input Field */
   --input-bg: var(--wh);
-  --input-label-color: var(--surface-700);
-  --input-color: var(--surface-600);
+  --input-text: var(--surface-600);
   --input-border: var(--surface-200);
-  --input-focus-border: var(--primary-500);
+  --input-border-focus: var(--primary-500);
   --input-placeholder: var(--surface-400);
+  --input-label: var(--surface-700);
 
-  /* checkbox */
-  --ckbox-bg: var(--wh);
-  --ckbox-border: var(--surface-300);
-  --checked-bg: var(--primary-500);
-  --checked-border: var(--primary-500);
+  /* Checkbox */
+  --checkbox-bg: var(--wh);
+  --checkbox-border: var(--surface-300);
+  --checkbox-checked-bg: var(--primary-500);
+  --checkbox-checked-border: var(--primary-500);
 
-  /* switch */
-  --switch-bg: var(--surface-400);
-  --switch-checked-bg: var(--primary-400);
-
-  /* radio */
-  --radio-btn-bg: var(--wh);
-  --radio-btn-border: var(--surface-300);
+  /* Radio Button */
+  --radio-bg: var(--wh);
+  --radio-border: var(--surface-300);
   --radio-checked-bg: var(--primary-500);
   --radio-checked-border: var(--primary-500);
 
-  /* disabled */
+  /* Switch Toggle */
+  --switch-bg: var(--surface-400);
+  --switch-checked-bg: var(--primary-400);
+  --switch-thumb-bg: var(--wh);
+
+  /* Chip (Box Checkbox & Radio) */
+  --chip-bg: var(--wh);
+  --chip-bg-hover: var(--primary-50);
+  --chip-border: var(--surface-300);
+  --chip-border-hover: var(--primary-200);
+  --chip-text: var(--surface-600);
+  --chip-checked-bg: var(--primary-500);
+  --chip-checked-border: var(--primary-500);
+  --chip-checked-text: var(--wh);
+
+  /* Disabled State */
   --disabled-bg: var(--surface-200);
-  --disabled-color: var(--surface-500);
+  --disabled-text: var(--surface-500);
   --disabled-border: var(--surface-300);
 
-  /* spinners */
-  --spinners-surface:var(--surface-200);
-  --spinners-primary:var(--primary-500);
+  /* Spinner */
+  --spinner-bg: var(--surface-200);
+  --spinner-primary: var(--primary-500);
 
 
    /* Height 변수 */
