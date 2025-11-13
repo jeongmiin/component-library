@@ -62,3 +62,52 @@
         });
       });
     });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+  // 비밀번호 Toggle 버튼
+  const visibilityButtons = document.querySelectorAll('.visibility_btn');
+  for (const button of visibilityButtons) {
+    button.addEventListener('click', function() {
+      this.classList.toggle('active');
+      const input = this.closest('.relative').querySelector('input');
+      if (input.type === 'password') {
+        input.type = 'text';
+      } else {
+        input.type = 'password';
+      }
+    });
+  }
+
+  // 모달 열기
+  document.querySelectorAll('[data-modal]').forEach(btn => {
+    btn.onclick = () => {
+      const modal = document.getElementById(btn.dataset.modal);
+      modal.style.display = 'block';
+      setTimeout(() => modal.classList.add('active'), 10);
+    };
+  });
+
+  // 모달 닫기
+  document.querySelectorAll('.modal_wrap').forEach(wrap => {
+    wrap.onclick = e => {
+      if (!e.target.closest('.modal_box.bottom') || e.target.classList.contains('modal_close_btn')) {
+        wrap.classList.remove('active');
+        setTimeout(() => wrap.style.display = 'none', 300);
+      }
+    };
+  });
+
+// 탭메뉴
+document.querySelectorAll('.tab_item').forEach(item => {
+  item.onclick = () => {
+    const tabWrap = item.closest('.tab_wrap');
+    tabWrap.querySelectorAll('.tab_item').forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+    tabWrap.querySelectorAll('.tab_panel').forEach(p => p.classList.remove('active'));
+    document.getElementById(item.dataset.tab).classList.add('active');
+  };
+});
+
+}); // document

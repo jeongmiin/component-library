@@ -1,6 +1,10 @@
 :root{
   --font-family: 'Pretendard',sans-serif;
 
+  /* system color */
+  --error: var(--orange-900);
+  --success: var(--primary-600);
+
   /* login bg */
   --login-top-bg: var(--primary-100);
   --login-middle-bg: var(--primary-50);
@@ -94,9 +98,13 @@
   --table-point07: var(--blue-600); 
   --table-point08: var(--blue-100); 
   --table-point09: var(--yellow-100); 
+
+  /* tab */
+  --tab-base: var(--surface-700);
+  --tab-active: var(--primary-500);
   
   /* ==================== */
-  /* Input Components     */
+  /* Form Components     */
   /* ==================== */
   /* Input Field */
   --input-bg: var(--wh);
