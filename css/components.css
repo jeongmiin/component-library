@@ -121,6 +121,26 @@ input[type="button"].btn_base{height: auto !important;}
 .float_label.always_top { top: 0; transform: translateY(-50%); background-color: var(--input-bg); padding: 0 4px; font-size: var(--text-xs); color: var(--input-placeholder);}
 .input_float:focus ~ .float_label.always_top { color: var(--color-pt-primary);}
 
+/* 파일 업로드 */
+.file_upload_area{position: relative; width: 100%; max-width: 100px; aspect-ratio: 1/1;}
+.base_table .file_upload_area{aspect-ratio: 1/1; max-width: 100%;}
+.file_upload_area .input_base{position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px dotted var(--border-primary); color: transparent; z-index: 1; background-color: rgba(255,255,255,0.5); cursor: pointer; margin-top: 0 !important;}
+.file_upload_area .input_base::after{content: "\e61e"; font-family: "Phosphor"; position: absolute; top: 40%; left: 50%; transform: translate(-50%,-50%); font-size: var(--text-4xl); color: var(--icon-primary); font-weight: var(--font-medium);}
+.file_upload_area .input_base::before{content: "UPLOAD"; font-size: var(--text-xs); font-weight: var(--font-semibold); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); padding-top: 4em; color: var(--color-secondary);}
+.file_upload_area .input_base:hover{border-color: var(--border-pt-primary);}
+.file_upload_area .input_base:hover::before,
+.file_upload_area .input_base:hover::after{color: var(--icon-pt-primary);}
+.file_upload_area .input_base::file-selector-button { display: none;}
+
+.file_upload_area .preview_item .preview{position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-primary); background-color: rgba(255,255,255,0.5); border-radius: var(--rounded-sm);}
+.file_upload_area .preview_item img{width: 92%; max-height: 92%; object-fit: contain; text-align: center;}
+.file_upload_area .preview_item .btn_base{position: absolute; top: 0; right: 0; z-index: 1;}
+
+.file_upload_area .preview_item:has(.preview){ position: relative; width: 100%; height: 100%; border-radius: var(--rounded-sm); text-align: center; }
+.file_upload_area .preview_item:has(.preview) + .input_base{z-index: -1;}
+
+
+
 /* Select */
 select.input_base { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23565868' d='M6 9L1 4h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75em center; padding-right: 2.5em; cursor: pointer;}
 
@@ -250,7 +270,24 @@ select.input_base { appearance: none; background-image: url("data:image/svg+xml,
 .card_icon span{ font-size: var(--text-sm); color: var(--color-tertiary); line-height: 1em; padding-left: var(--space-4xs);}
 
 
+/* ==================== */
+/* Table                */
+/* ==================== */
+.base_table_container { overflow-x: auto; width: 100%;}
+.base_table { width: 100%; border-collapse: collapse; overflow: hidden; background-color: var(--bg-primary); table-layout: fixed; border-top: 2px solid var(--table-top-border);}
+.base_table th,
+.base_table td { font-size: var(--text-sm); line-height: 1.5em; border: 1px solid var(--border-primary); padding: var(--table-space-sm) var(--table-space-md); text-align: left; vertical-align: middle;}
+.base_table thead th { background-color: var(--table-bg-primary); color: var(--color-primary); font-weight: var(--font-semibold); text-align: center; white-space: nowrap;}
+.base_table tbody td { background-color: var(--bg-primary); color: var(--table-color); font-weight: var(--font-medium);}
+.base_table tbody tr:hover td { background-color: var(--table-hover-bg); color: var(--table-hover-color);}
+.base_table tbody th { background-color: var(--table-bg-primary); font-weight: var(--font-semibold); text-align: center;}
 
+/* 반응형 */
+@media screen and (max-width: 1399px) {
+  .base_table_container {
+    overflow-x: auto;
+  }
+}
 
 
 

@@ -81,24 +81,15 @@
   /* table */
   --table-surface: var(--wh);
   --table-bg-primary: var(--surface-50);
+  --table-color:var(--surface-700);
   --table-hover-bg: var(--primary-50);
   --table-hover-color: var(--primary-600);
   --table-border:var(--surface-100);
+  --table-top-border:var(--surface-900);
   --table-space-sm: 6px; 
   --table-space-md: 8px; 
   --table-space: 7px;
   
-  --table-point00: var(--surface-800); 
-  --table-point01: var(--primary-600);
-  --table-point02: var(--primary-500);
-  --table-point03: var(--primary-100);
-  --table-point04: var(--primary-50);
-  --table-point05: var(--red-600); 
-  --table-point06: var(--red-100); 
-  --table-point07: var(--blue-600); 
-  --table-point08: var(--blue-100); 
-  --table-point09: var(--yellow-100); 
-
   /* tab */
   --tab-base: var(--surface-700);
   --tab-active: var(--primary-500);
