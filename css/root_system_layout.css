@@ -141,6 +141,15 @@
   --spinner-bg: var(--surface-200);
   --spinner-primary: var(--primary-500);
 
+  /* badge */
+  --badge-primary-bg: var(--primary-500);
+  --badge-primary-text: var(--wh); 
+  --badge-secondary-bg: var(--primary-50);
+  --badge-secondary-text: var(--primary-500);
+  --badge-secondary-border: var(--primary-500);
+  --badge-tertiary-bg: var(--wh);
+  --badge-tertiary-border: var(--surface-200);
+  --badge-tertiary-text: var(--surface-600);
 
    /* Height 변수 */
   --height-input-sm: 32px;

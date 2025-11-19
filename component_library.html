@@ -79,6 +79,7 @@
             <li><a href="#tabs" class="nav-link">Tabs</a></li>
             <li><a href="#card" class="nav-link">Cards</a></li>
             <li><a href="#tables" class="nav-link">Tables</a></li>
+            <li><a href="#badge" class="nav-link">Badge</a></li>
           </ul>
         </nav>
       </div>
@@ -112,7 +113,7 @@
               </div>
               <div class="text-sm text-gray-500 mt-4 mb-2 font-medium">Surface</div>
               <div class="flex gap-3">
-                <span class="w-10 h-10 rounded-lg bg-gray-50 block"></span>
+                <span class="w-10 h-10 rounded-lg bg-gray-50 block border border-gray-200"></span>
                 <span class="w-10 h-10 rounded-lg bg-gray-100 block"></span>
                 <span class="w-10 h-10 rounded-lg bg-gray-200 block"></span>
                 <span class="w-10 h-10 rounded-lg bg-gray-300 block"></span>
@@ -691,6 +692,22 @@
             <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
               <div class="flex flex-wrap gap-3">
+                <div class="w-full text-sm text-gray-500 font-medium">sm Size</div>
+                <div class="chip_field">
+                  <input type="checkbox" id="chip_sm1" checked>
+                  <label for="chip_sm1" class="chip_label sm">
+                    <i class="ph ph-check"></i>Small
+                  </label>
+                </div>
+                <div class="chip_field">
+                  <input type="checkbox" id="chip_sm2">
+                  <label for="chip_sm2" class="chip_label sm">
+                    <i class="ph ph-check"></i>Small
+                  </label>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <div class="w-full text-sm text-gray-500 mt-6 font-medium">md Size</div>
                 <!-- 기본 Chips -->
                 <div class="chip_field">
                   <input type="checkbox" id="chip1" checked>
@@ -711,25 +728,8 @@
                   </label>
                 </div>
               </div>
-
-              <div class="text-sm text-gray-500 mb-2 mt-6 font-medium">Small Size</div>
               <div class="flex flex-wrap gap-3">
-                <div class="chip_field">
-                  <input type="checkbox" id="chip_sm1" checked>
-                  <label for="chip_sm1" class="chip_label sm">
-                    <i class="ph ph-check"></i>Small
-                  </label>
-                </div>
-                <div class="chip_field">
-                  <input type="checkbox" id="chip_sm2">
-                  <label for="chip_sm2" class="chip_label sm">
-                    <i class="ph ph-check"></i>Small
-                  </label>
-                </div>
-              </div>
-
-              <div class="text-sm text-gray-500 mb-2 mt-6 font-medium">Large Size</div>
-              <div class="flex flex-wrap gap-3">
+                <div class="w-full text-sm text-gray-500 mt-6 font-medium">lg Size</div>
                 <div class="chip_field">
                   <input type="checkbox" id="chip_lg1" checked>
                   <label for="chip_lg1" class="chip_label lg">
@@ -800,7 +800,7 @@
       <!-- Radio Button Section -->
       <section id="radio" class="mb-12">
         <div class="bg-white rounded-lg shadow-sm p-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-3">Radio Button</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">라디오 버튼 | Radio Button</h2>
           <p class="text-gray-600 mb-8">라디오버튼 컴포넌트 - 사용자 단일 선택을 받는 UI 요소입니다.</p>
 
           <div class="mb-10">
@@ -894,6 +894,24 @@
             <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
               <div class="flex flex-wrap gap-3">
+                <div class="w-full text-sm text-gray-500 font-medium">sm Size</div>
+                <div class="chip_field">
+                  <input type="radio" id="radio_chip_sm1" name="radio_chip_group2" checked>
+                  <label for="radio_chip_sm1" class="chip_label sm">
+                    <i class="ph ph-check"></i>
+                    Small 1
+                  </label>
+                </div>
+                <div class="chip_field">
+                  <input type="radio" id="radio_chip_sm2" name="radio_chip_group2">
+                  <label for="radio_chip_sm2" class="chip_label sm">
+                    <i class="ph ph-check"></i>
+                    Small 2
+                  </label>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <div class="w-full text-sm text-gray-500 mt-6 font-medium">md Size</div>
                 <!-- 기본 Radio Chips -->
                 <div class="chip_field">
                   <input type="radio" id="radio_chip1" name="radio_chip_group1" checked>
@@ -925,26 +943,8 @@
                 </div>
               </div>
 
-              <div class="text-sm text-gray-500 mb-2 mt-6 font-medium">Small Size</div>
               <div class="flex flex-wrap gap-3">
-                <div class="chip_field">
-                  <input type="radio" id="radio_chip_sm1" name="radio_chip_group2" checked>
-                  <label for="radio_chip_sm1" class="chip_label sm">
-                    <i class="ph ph-check"></i>
-                    Small 1
-                  </label>
-                </div>
-                <div class="chip_field">
-                  <input type="radio" id="radio_chip_sm2" name="radio_chip_group2">
-                  <label for="radio_chip_sm2" class="chip_label sm">
-                    <i class="ph ph-check"></i>
-                    Small 2
-                  </label>
-                </div>
-              </div>
-
-              <div class="text-sm text-gray-500 mb-2 mt-6 font-medium">Large Size</div>
-              <div class="flex flex-wrap gap-3">
+                <div class="w-full text-sm text-gray-500 mt-6 font-medium">lg Size</div>
                 <div class="chip_field">
                   <input type="radio" id="radio_chip_lg1" name="radio_chip_group3" checked>
                   <label for="radio_chip_lg1" class="chip_label lg">
@@ -1014,7 +1014,7 @@
       <!-- Select Section -->
       <section id="select" class="mb-12">
         <div class="bg-white rounded-lg shadow-sm p-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-3">Select</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">셀렉트 | Select</h2>
           <p class="text-gray-600 mb-8">셀렉트 컴포넌트 - 여러 개의 옵션 목록을 제공하여 그 중 한 개의 값을 선택할 수 있도록 하는 UI 요소입니다.</p>
 
           <div class="mb-10">
@@ -1082,8 +1082,8 @@
 
        <!-- Tooltip Section -->
       <section id="tooltip" class="mb-12">
-        <div class="bg-white rounded-lg shadow-sm p-3">
-          <h2 class="text-3xl font-bold text-gray-900 mb-3">Tooltip</h2>
+        <div class="bg-white rounded-lg shadow-sm p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">툴팁 | Tooltip</h2>
           <p class="text-gray-600 mb-8">툴팁 컴포넌트 - 정보를 툴팁 형식으로 표시합니다.</p>
 
           <div class="mb-10">
@@ -1105,8 +1105,8 @@
 
       <!-- Modal Section -->
       <section id="modals" class="mb-12">
-        <div class="bg-white rounded-lg shadow-sm p-3">
-          <h2 class="text-3xl font-bold text-gray-900 mb-3">Modal</h2>
+        <div class="bg-white rounded-lg shadow-sm p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">모달 | Modal</h2>
           <p class="text-gray-600 mb-8">모달 컴포넌트 - 정보 전달을 모달 형식으로 표시합니다.</p>
 
           <div class="mb-10">
@@ -1150,8 +1150,8 @@
 
       <!-- Bottom modal Section -->
       <section id="bottom_modal" class="mb-12">
-        <div class="bg-white rounded-lg shadow-sm p-3">
-          <h2 class="text-3xl font-bold text-gray-900 mb-3">Bottom modal</h2>
+        <div class="bg-white rounded-lg shadow-sm p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">하단 모달 | Bottom modal</h2>
           <p class="text-gray-600 mb-8">하단 모달 컴포넌트 - 정보 전달을 하단 팝업 형식으로 표시합니다.</p>
 
           <div class="mb-10">
@@ -1192,8 +1192,8 @@
       </section> 
 
       <section id="tabs" class="mb-12">
-        <div class="bg-white rounded-lg shadow-sm p-3">
-          <h2 class="text-3xl font-bold text-gray-900 mb-3">tab</h2>
+        <div class="bg-white rounded-lg shadow-sm p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">탭 tab</h2>
           <p class="text-gray-600 mb-8">탭 컴포넌트 - 콘텐츠를 탭 형식으로 표시합니다.</p>
 
           <div class="mb-10">
@@ -1221,8 +1221,8 @@
       </section>
       <!--  card Section -->
       <section id="card" class="mb-12">
-        <div class="bg-white rounded-lg shadow-sm p-3">
-          <h2 class="text-3xl font-bold text-gray-900 mb-3">Card</h2>
+        <div class="bg-white rounded-lg shadow-sm p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">카드 | Card</h2>
           <p class="text-gray-600 mb-8">카드 컴포넌트 - 콘텐츠를 카드 형식으로 표시합니다.</p>
 
           <div class="mb-10">
@@ -1268,10 +1268,10 @@
           </div>
         </div>
       </section>
-      <!--  Section -->
+      <!--  table Section -->
       <section id="tables" class="mb-12">
         <div class="bg-white rounded-lg shadow-sm p-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-3">Tables</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">테이블 | Tables</h2>
           <p class="text-gray-600 mb-8">테이블 컴포넌트 - 데이터를 표 형식으로 표시합니다.</p>
 
           <div class="mb-10">
@@ -1325,6 +1325,42 @@
                     </tbody>
                   </table>
                 </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  badge Section -->
+      <section id="badge" class="mb-12">
+        <div class="bg-white rounded-lg shadow-sm p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">뱃지 | Badge</h2>
+          <p class="text-gray-600 mb-8">뱃지 컴포넌트 - 콘텐츠의 부가적인 정보를 전달합니다.</p>
+
+          <div class="mb-10">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+              숫자형 (크기)
+            </h3>
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
+              <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
+                <div class="flex items-center gap-3">
+                  <div class="badge_base primary sm">11</div>
+                  <div class="badge_base primary">22</div>
+                  <div class="badge_base primary lg">33</div>
+                  <div class="badge_base primary sm">44</div>
+                </div>
+            </div>
+          </div>
+          <div class="mb-10">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+              텍스트형 (스타일)
+            </h3>
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
+              <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
+                <div class="flex items-center gap-3">
+                  <div class="badge_base text primary">primary</div>
+                  <div class="badge_base text secondary">secondary</div>
+                  <div class="badge_base text tertiary">tertiary</div>
+                  <div class="badge_base text disabled">disabled</div>
+                </div>
             </div>
           </div>
         </div>

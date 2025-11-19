@@ -289,6 +289,22 @@ select.input_base { appearance: none; background-image: url("data:image/svg+xml,
   }
 }
 
+/* ==================== */
+/* Badge                */
+/* ==================== */
+.badge_base { display: inline-flex; align-items: center; justify-content: center; font-weight: var(--font-semibold); border-radius: var(--rounded-circle); border: 1px solid transparent;  line-height: 1em; padding: 0.5em 0.8em; font-size: var(--text-xs); white-space: nowrap; aspect-ratio: 1/1;}
+.badge_base.text{border-radius: var(--rounded-full); aspect-ratio: inherit;}
+
+/* Badge 사이즈 */
+.badge_base.sm { font-size: var(--text-2xs); padding: 0.4em 0.7em;}
+.badge_base.lg { font-size: var(--text-sm); padding: 0.6em 0.9em;}
+
+/* Badge 색상 */
+.badge_base.primary { background-color: var(--badge-primary-bg); color: var(--badge-primary-text);}
+.badge_base.secondary { background-color: var(--badge-secondary-bg); border-color: var(--badge-secondary-border); color: var(--badge-secondary-text);}
+.badge_base.tertiary { background-color: var(--badge-tertiary-bg); border-color: var(--badge-tertiary-border); color: var(--badge-tertiary-text);}
+.badge_base.disabled { background-color: var(--disabled-bg); color: var(--disabled-text); border-color: var(--disabled-border);}
+
 
 
 
