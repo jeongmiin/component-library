@@ -1,0 +1,217 @@
+:root{
+  --font-family: 'Pretendard',sans-serif;
+
+
+  /* ==================== */
+  /* System States */
+  /* ==================== */
+  --state-error: var(--orange-900);   
+  --state-success: var(--primary-600);
+
+
+  /* ==================== */
+  /* Page Specific */
+  /* ==================== */
+  /* Login Page Backgrounds */
+  --login-bg-top: var(--primary-100);
+  --login-bg-middle: var(--primary-50);
+  --login-bg-bottom: var(--surface-50);
+
+  /* Global Navigation Bar */
+  --gnb-bg-active: var(--primary-50);
+
+  /* Scrollbar */
+  --scrollbar-thumb: var(--surface-300);
+  --scrollbar-thumb-hover: var(--surface-400);
+  --scrollbar-track: var(--surface-50);
+
+
+  /* ==================== */
+  /* Grid & Layout */
+  /* ==================== */
+
+  /* Grid Spacing (Dashboard Section) */
+  --grid-base: 0.75em;
+  --grid-fluid: 1%;
+  --grid-large: 2.5em;
+  --grid-medium: 1.5em;
+
+  /* ==================== */
+  /* Spacing Scale */
+  /* ==================== */
+  /* Base Spacing Scale (모든 속성에서 사용 가능) */
+  --space-4xs: 2px;
+  --space-3xs: 4px;
+  --space-2xs: 6px;
+  --space-xs: 8px;
+  --space-sm: 0.625em;
+  --space-md: 0.75em;
+  --space-lg: 0.875em;
+  --space-xl: 1em;
+  --space-2xl: 1.25em;
+  --space-3xl: 1.5em;
+  --space-4xl: 2em;
+
+ 
+  /* ==================== */
+  /* Button Components */
+  /* ==================== */
+  /* Primary Button (브랜드 컬러) */
+  --btn-primary-bg: var(--primary-500);
+  --btn-primary-bg-hover: var(--primary-600);
+  --btn-primary-text: var(--wh);
+
+  /* Secondary Button (아웃라인 브랜드) */
+  --btn-secondary-bg: var(--wh);
+  --btn-secondary-bg-hover: var(--primary-50);
+  --btn-secondary-text: var(--primary-600);
+  --btn-secondary-border: var(--primary-200);
+
+  /* Tertiary Button (기본 아웃라인) */
+  --btn-tertiary-bg: var(--wh);
+  --btn-tertiary-bg-hover: var(--wh);
+  --btn-tertiary-text: var(--surface-600);
+  --btn-tertiary-text-hover: var(--primary-600);
+  --btn-tertiary-border: var(--surface-200);
+  --btn-tertiary-border-hover: var(--primary-400);
+
+  /* Inverse Button (어두운 버튼) */
+  --btn-inverse-bg: var(--surface-900);
+  --btn-inverse-bg-hover: var(--bk);
+  --btn-inverse-text: var(--wh);
+
+  /* Neutral Button (중성 버튼) */
+  --btn-neutral-bg: var(--surface-700);
+  --btn-neutral-bg-hover: var(--surface-800);
+  --btn-neutral-text: var(--wh);
+
+  /* Subtle Button (연한 버튼) */
+  --btn-subtle-bg: var(--surface-50);
+  --btn-subtle-bg-hover: var(--surface-100);
+  --btn-subtle-text: var(--surface-600);
+  --btn-subtle-border: var(--surface-200);
+
+  /* Ghost Button (투명 배경) */
+  --btn-ghost-bg: transparent;
+  --btn-ghost-bg-hover: transparent;
+  --btn-ghost-text: var(--surface-600);
+  --btn-ghost-text-hover: var(--primary-500);
+
+  /* Link Button (링크 스타일) */
+  --btn-link-bg: transparent;
+  --btn-link-text: var(--primary-500);
+  --btn-link-text-hover: var(--primary-700);
+
+
+  /* ==================== */
+  /* Table Component */
+  /* ==================== */
+  --table-bg: var(--wh);
+  --table-bg-header: var(--surface-50);
+  --table-text: var(--surface-700);
+  --table-bg-hover: var(--primary-50);
+  --table-text-hover: var(--primary-600);
+  --table-border: var(--surface-100);
+  --table-border-top: var(--surface-900);
+
+  /* Table Spacing */
+  --table-spacing-sm: 6px;
+  --table-spacing-md: 8px;
+  --table-spacing: 7px;
+
+
+  /* ==================== */
+  /* Tab Component */
+  /* ==================== */
+  --tab-text: var(--surface-700);
+  --tab-text-active: var(--primary-500);
+
+
+  /* ==================== */
+  /* Form Components */
+  /* ==================== */
+  /* Input Field */
+  --input-bg: var(--wh);
+  --input-text: var(--surface-600);
+  --input-border: var(--surface-200);
+  --input-border-focus: var(--primary-500);
+  --input-placeholder: var(--surface-400);
+  --input-label: var(--surface-700);
+
+  /* Checkbox */
+  --checkbox-bg: var(--wh);
+  --checkbox-border: var(--surface-300);
+  --checkbox-bg-checked: var(--primary-500);
+  --checkbox-border-checked: var(--primary-500);
+
+  /* Radio Button */
+  --radio-bg: var(--wh);
+  --radio-border: var(--surface-300);
+  --radio-bg-checked: var(--primary-500);      
+  --radio-border-checked: var(--primary-500);  
+
+  /* Switch Toggle */
+  --switch-bg: var(--surface-400);          
+  --switch-bg-checked: var(--primary-400);       
+  --switch-thumb: var(--wh);                    
+
+  /* Chip (Box Checkbox & Radio) */
+  --chip-bg: var(--wh);                 
+  --chip-bg-hover: var(--primary-50);      
+  --chip-border: var(--surface-300);    
+  --chip-border-hover: var(--primary-200); 
+  --chip-text: var(--surface-600);      
+  --chip-bg-checked: var(--primary-500);
+  --chip-border-checked: var(--primary-500); 
+  --chip-text-checked: var(--wh);
+
+
+  /* ==================== */
+  /* State: Disabled */
+  /* ==================== */
+  --disabled-bg: var(--surface-200);
+  --disabled-text: var(--surface-500);
+  --disabled-border: var(--surface-300);
+ 
+
+  /* ==================== */
+  /* Spinner / Loading */
+  /* ==================== */
+  --spinner-bg: var(--surface-200);
+  --spinner-color: var(--primary-500);
+
+
+  /* ==================== */
+  /* Badge Component */
+  /* ==================== */
+  /* Primary Badge */
+  --badge-primary-bg: var(--primary-500);     
+  --badge-primary-text: var(--wh);
+
+  /* Secondary Badge (아웃라인) */
+  --badge-secondary-bg: var(--primary-50);        
+  --badge-secondary-text: var(--primary-500);   
+  --badge-secondary-border: var(--primary-500); 
+
+  /* Tertiary Badge (중성) */
+  --badge-tertiary-bg: var(--wh);
+  --badge-tertiary-text: var(--surface-600);
+  --badge-tertiary-border: var(--surface-200);
+
+
+  /* ==================== */
+  /* Size: Height */
+  /* ==================== */
+  --height-input-sm: 32px;
+  --height-input-md: 2.29em;
+  --height-input-lg: 2.85em; 
+
+
+  /* ==================== */
+  /* Size: Width */
+  /* ==================== */
+  --width-search: 340px;
+  --width-select-min: 150px;
+  --width-datepicker: 130px;
+
+}
