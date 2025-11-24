@@ -90,45 +90,121 @@
   --surface-950: var(--gray-950);
 
 
-  /* overlay */
+  /* ==================== */
+  /* Shadow / Overlay */
+  /* ==================== */
   --shadow-primary: 0px 4px 10px 0px rgba(0,0,0,0.08);
 
-  /* bg */
-  --bg-surface: var(--surface-50);
-  --bg-primary: var(--wh);
-  --bg-alt-primary: var(--surface-300);
+
+  /* ==================== */
+  /* Background Colors */
+  /* ==================== */
+
+  /* 기본 배경 (Neutral Backgrounds) */
+  --bg-default: var(--wh);
+  --bg-primary: var(--surface-50); 
   --bg-secondary: var(--surface-100);
-  --bg-pt-primary: var(--primary-500);
-  --bg-pt-alt-primary: var(--primary-600);
-  --bg-pt-secondary: var(--primary-50);
-  --bg-pt-tertiary: var(--primary-100);
+  --bg-tertiary: var(--surface-300);
+  --bg-disabled: var(--surface-200);
 
-  /* text */
-  --color-surface: var(--surface-950);
-  --color-alt-surface: var(--surface-50);
-  --color-primary: var(--surface-800);
-  --color-alt-primary: var(--wh);
-  --color-secondary: var(--surface-400);
-  --color-alt-secondary: var(--surface-500);
-  --color-tertiary: var(--surface-700);
-  --color-pt-primary: var(--primary-500);
-  --color-pt-secondary: var(--primary-600);
+  /* 반전 배경 (Inverse Backgrounds) */
+  --bg-inverse: var(--surface-950);
+  --bg-inverse-secondary: var(--surface-900);
 
-  /* border */
+  /* 브랜드 컬러 배경 (Brand Backgrounds) */
+  --bg-brand: var(--primary-500);
+  --bg-brand-strong: var(--primary-600);
+  --bg-brand-subtle: var(--primary-50);
+  --bg-brand-subtler: var(--primary-100);
+
+  /* 상태 배경 (State Backgrounds) - 확장 가능 */
+  --bg-danger: var(--red-500);
+  --bg-danger-subtle: var(--red-50);
+  --bg-warning: var(--yellow-500);
+  --bg-warning-subtle: var(--yellow-50);
+  --bg-success: var(--blue-500);
+  --bg-success-subtle: var(--blue-50);
+  --bg-information: var(--blue-600);
+  --bg-information-subtle: var(--blue-100);
+
+
+  /* ==================== */
+  /* Text Colors */
+  /* ==================== */
+
+  /* 기본 텍스트 (Neutral Text) - 진함 → 연함 순서 */
+  --text-default: var(--surface-950);
+  --text-primary: var(--surface-800);
+  --text-secondary: var(--surface-700);
+  --text-tertiary: var(--surface-500);
+  --text-disabled: var(--surface-400);
+
+  /* 반전 텍스트 (Inverse Text) */
+  --text-inverse: var(--wh);
+  --text-inverse-secondary: var(--surface-50);
+
+  /* 브랜드 컬러 텍스트 (Brand Text) */
+  --text-brand: var(--primary-500);
+  --text-brand-strong: var(--primary-600);
+
+  /* 상태 텍스트 (State Text) - 확장 가능 */
+  --text-danger: var(--red-500);
+  --text-warning: var(--yellow-700);
+  --text-success: var(--blue-500);
+  --text-information: var(--blue-600);
+
+
+  /* ==================== */
+  /* Border Colors */
+  /* ==================== */
+  /* 기본 보더 (Neutral Borders) - 연함 → 진함 순서 */
+  --border-default: var(--surface-50);
   --border-primary: var(--surface-100);
-  --border-alt-primary: var(--surface-50);
   --border-secondary: var(--surface-200);
   --border-tertiary: var(--surface-300);
-  --border-pt-primary: var(--primary-500);
-  --border-pt-secondary: var(--primary-400);
-  --border-pt-tertiary: var(--primary-200);
+  --border-disabled: var(--surface-200);
 
-  /* icon fill */
-  --icon-surface: var(--surface-500);
-  --icon-primary:  var(--surface-400);
-  --icon-pt-primary: var(--primary-500);
-  --icon-secondary: var(--wh);
-  --icon-tertiary: var(--surface-950);
+  /* 반전 보더 (Inverse Borders) */
+  --border-inverse: var(--surface-800);
+  --border-inverse-secondary: var(--surface-700);
+
+  /* 브랜드 컬러 보더 (Brand Borders) */
+  --border-brand: var(--primary-500);
+  --border-brand-strong: var(--primary-400);
+  --border-brand-subtle: var(--primary-200);
+
+  /* 상태 보더 (State Borders) - 확장 가능 */
+  --border-danger: var(--red-500);
+  --border-warning: var(--yellow-500);
+  --border-success: var(--blue-500);
+  --border-information: var(--blue-600);
+
+
+  /* ==================== */
+  /* Icon Colors */
+  /* ==================== */
+
+  /* 기본 아이콘 (Neutral Icons) */
+  --icon-default: var(--surface-500);
+  --icon-subtle: var(--surface-400);
+  --icon-disabled: var(--surface-300);
+
+  /* 반전 아이콘 (Inverse Icons) */
+  --icon-inverse: var(--wh);
+
+  /* 강조 아이콘 (Emphasis Icons) */
+  --icon-emphasis: var(--primary-500);
+
+  /* 인터랙티브 아이콘 (Interactive Icons) */
+  --icon-interactive: var(--primary-500);
+  --icon-interactive-hover: var(--primary-600);
+  
+  /* 상태 아이콘 (State Icons) - 확장 가능 */
+  --icon-danger: var(--red-500);
+  --icon-warning: var(--yellow-600);
+  --icon-success: var(--blue-500);
+  --icon-information: var(--blue-600);
+
 
   /* Text */
   --text-4xl: 2.375em; /* 36px */

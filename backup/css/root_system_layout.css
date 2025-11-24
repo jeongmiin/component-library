@@ -1,0 +1,168 @@
+:root{
+  --font-family: 'Pretendard',sans-serif;
+
+  /* system color */
+  --error: var(--orange-900);
+  --success: var(--primary-600);
+
+  /* login bg */
+  --login-top-bg: var(--primary-100);
+  --login-middle-bg: var(--primary-50);
+  --login-bottom-bg: var(--surface-50);
+  /* gnb bg */
+  --gnb-active-bg: var(--primary-50);
+  /* scroll bar */
+  --scroll-bar: var(--surface-300); 
+  --scroll-bar-hover: var(--surface-400); 
+  --scroll-bar-bg: var(--surface-50); 
+
+
+  /* db section  여백 */
+  --grid-primary: 0.75em; /* 12px */
+  --grid-alt-primary:  1%; /* 가변의 1.25em 크기 */
+  --grid-secondary: 2.5em;
+  --grid-tertiary: 1.5em;
+
+  /* 여백 */
+  --space-4xs: 2px;
+  --space-3xs: 4px;
+  --space-2xs: 6px;
+  --space-xs: 8px; /* 8px */
+  --space-sm: 0.625em; /* 10px */
+  --space-md: 0.75em; /* 12px */
+  --space-lg: 0.875em; /* 14px */
+  --space-xl: 1em; /* 16px */
+  --space-2xl: 1.25em; /* 20px */
+  --space-3xl: 1.5em; /* 24px */
+  --space-4xl: 2em; /* 32px */
+
+  /* ==================== */
+  /* Button Components    */
+  /* ==================== */
+  --btn-primary-bg: var(--primary-500);
+  --btn-primary-bg-hover: var(--primary-600);
+  --btn-primary-text: var(--wh);
+
+  --btn-secondary-bg: var(--wh);
+  --btn-secondary-bg-hover: var(--primary-50);
+  --btn-secondary-text: var(--primary-600);
+  --btn-secondary-border: var(--primary-200);
+
+  --btn-tertiary-bg: var(--wh);
+  --btn-tertiary-bg-hover: var(--wh);
+  --btn-tertiary-text: var(--surface-600);
+  --btn-tertiary-text-hover: var(--primary-600);
+  --btn-tertiary-border: var(--surface-200);
+  --btn-tertiary-border-hover: var(--primary-400);
+
+  --btn-inverse-bg: var(--surface-900);
+  --btn-inverse-bg-hover: var(--bk);
+  --btn-inverse-text: var(--wh);
+
+  --btn-neutral-bg: var(--surface-700);
+  --btn-neutral-bg-hover: var(--surface-800);
+  --btn-neutral-text: var(--wh);
+
+  --btn-subtle-bg: var(--surface-50);
+  --btn-subtle-bg-hover: var(--surface-100);
+  --btn-subtle-text: var(--surface-600);
+  --btn-subtle-border: var(--surface-200);
+
+  --btn-ghost-bg: transparent;
+  --btn-ghost-bg-hover: transparent;
+  --btn-ghost-text: var(--surface-600);
+  --btn-ghost-text-hover: var(--primary-500);
+
+  --btn-link-bg: transparent;
+  --btn-link-text: var(--primary-500);
+  --btn-link-text-hover: var(--primary-700);
+
+
+  /* table */
+  --table-surface: var(--wh);
+  --table-bg-primary: var(--surface-50);
+  --table-color:var(--surface-700);
+  --table-hover-bg: var(--primary-50);
+  --table-hover-color: var(--primary-600);
+  --table-border:var(--surface-100);
+  --table-top-border:var(--surface-900);
+  --table-space-sm: 6px; 
+  --table-space-md: 8px; 
+  --table-space: 7px;
+  
+  /* tab */
+  --tab-base: var(--surface-700);
+  --tab-active: var(--primary-500);
+  
+  /* ==================== */
+  /* Form Components     */
+  /* ==================== */
+  /* Input Field */
+  --input-bg: var(--wh);
+  --input-text: var(--surface-600);
+  --input-border: var(--surface-200);
+  --input-border-focus: var(--primary-500);
+  --input-placeholder: var(--surface-400);
+  --input-label: var(--surface-700);
+
+  /* Checkbox */
+  --checkbox-bg: var(--wh);
+  --checkbox-border: var(--surface-300);
+  --checkbox-checked-bg: var(--primary-500);
+  --checkbox-checked-border: var(--primary-500);
+
+  /* Radio Button */
+  --radio-bg: var(--wh);
+  --radio-border: var(--surface-300);
+  --radio-checked-bg: var(--primary-500);
+  --radio-checked-border: var(--primary-500);
+
+  /* Switch Toggle */
+  --switch-bg: var(--surface-400);
+  --switch-checked-bg: var(--primary-400);
+  --switch-thumb-bg: var(--wh);
+
+  /* Chip (Box Checkbox & Radio) */
+  --chip-bg: var(--wh);
+  --chip-bg-hover: var(--primary-50);
+  --chip-border: var(--surface-300);
+  --chip-border-hover: var(--primary-200);
+  --chip-text: var(--surface-600);
+  --chip-checked-bg: var(--primary-500);
+  --chip-checked-border: var(--primary-500);
+  --chip-checked-text: var(--wh);
+
+  /* Disabled State */
+  --disabled-bg: var(--surface-200);
+  --disabled-text: var(--surface-500);
+  --disabled-border: var(--surface-300);
+
+  /* Spinner */
+  --spinner-bg: var(--surface-200);
+  --spinner-primary: var(--primary-500);
+
+  /* badge */
+  --badge-primary-bg: var(--primary-500);
+  --badge-primary-text: var(--wh); 
+  --badge-secondary-bg: var(--primary-50);
+  --badge-secondary-text: var(--primary-500);
+  --badge-secondary-border: var(--primary-500);
+  --badge-tertiary-bg: var(--wh);
+  --badge-tertiary-border: var(--surface-200);
+  --badge-tertiary-text: var(--surface-600);
+
+   /* Height 변수 */
+  --height-input-sm: 32px;
+  --height-input-md: 2.29em;
+  --height-input-lg: 2.85em;
+  
+  /* Width 변수 */
+  --width-search-field: 340px;
+  --width-select-min: 150px;
+  --width-datepicker: 130px;
+  
+  /* Padding 미세 조정 */
+  --space-5px: 5px;
+  --space-7px: 7px;
+
+}
