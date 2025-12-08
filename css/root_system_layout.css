@@ -1,13 +1,28 @@
 :root{
   --font-family: 'Pretendard',sans-serif;
 
-
   /* ==================== */
   /* System States */
   /* ==================== */
   --state-error: var(--orange-900);   
   --state-success: var(--primary-600);
 
+  /* ==================== */
+  /* Size: Height */
+  /* ==================== */
+  --height-xs: 1.25rem;
+  --height-sm: 1.5rem;
+  --height-md: 2rem;
+  --height-lg: 2.75rem; 
+  --height-xl: 3.5rem; 
+
+
+  /* ==================== */
+  /* Size: Width */
+  /* ==================== */
+  /* --width-search: 340px;
+  --width-select-min: 150px;
+  --width-datepicker: 130px; */
 
   /* ==================== */
   /* Page Specific */
@@ -25,34 +40,6 @@
   --scrollbar-thumb-hover: var(--surface-400);
   --scrollbar-track: var(--surface-50);
 
-
-  /* ==================== */
-  /* Grid & Layout */
-  /* ==================== */
-
-  /* Grid Spacing (Dashboard Section) */
-  --grid-base: 0.75em;
-  --grid-fluid: 1%;
-  --grid-large: 2.5em;
-  --grid-medium: 1.5em;
-
-  /* ==================== */
-  /* Spacing Scale */
-  /* ==================== */
-  /* Base Spacing Scale (모든 속성에서 사용 가능) */
-  --space-4xs: 2px;
-  --space-3xs: 4px;
-  --space-2xs: 6px;
-  --space-xs: 8px;
-  --space-sm: 0.625em;
-  --space-md: 0.75em;
-  --space-lg: 0.875em;
-  --space-xl: 1em;
-  --space-2xl: 1.25em;
-  --space-3xl: 1.5em;
-  --space-4xl: 2em;
-
- 
   /* ==================== */
   /* Button Components */
   /* ==================== */
@@ -197,21 +184,5 @@
   --badge-tertiary-bg: var(--wh);
   --badge-tertiary-text: var(--surface-600);
   --badge-tertiary-border: var(--surface-200);
-
-
-  /* ==================== */
-  /* Size: Height */
-  /* ==================== */
-  --height-input-sm: 32px;
-  --height-input-md: 2.29em;
-  --height-input-lg: 2.85em; 
-
-
-  /* ==================== */
-  /* Size: Width */
-  /* ==================== */
-  --width-search: 340px;
-  --width-select-min: 150px;
-  --width-datepicker: 130px;
 
 }

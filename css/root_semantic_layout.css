@@ -89,17 +89,14 @@
   --surface-900: var(--gray-900);
   --surface-950: var(--gray-950);
 
-
   /* ==================== */
   /* Shadow / Overlay */
   /* ==================== */
   --shadow-primary: 0px 4px 10px 0px rgba(0,0,0,0.08);
 
-
   /* ==================== */
   /* Background Colors */
   /* ==================== */
-
   /* 기본 배경 (Neutral Backgrounds) */
   --bg-default: var(--wh);
   --bg-primary: var(--surface-50); 
@@ -127,11 +124,9 @@
   --bg-information: var(--blue-600);
   --bg-information-subtle: var(--blue-100);
 
-
   /* ==================== */
   /* Text Colors */
   /* ==================== */
-
   /* 기본 텍스트 (Neutral Text) - 진함 → 연함 순서 */
   --text-default: var(--surface-950);
   --text-primary: var(--surface-800);
@@ -183,7 +178,6 @@
   /* ==================== */
   /* Icon Colors */
   /* ==================== */
-
   /* 기본 아이콘 (Neutral Icons) */
   --icon-default: var(--surface-500);
   --icon-subtle: var(--surface-400);
@@ -205,7 +199,13 @@
   --icon-success: var(--blue-500);
   --icon-information: var(--blue-600);
 
-
+  /* Heading Text */
+  --text-h2: 2.375em; /* 36px */
+  --text-h3: 2em; /* 32px */
+  --text-h4: 1.75em; /* 28px */
+  --text-h5: 1.5em; /* 24px */
+  --text-h6: 1.25em; /* 20px */
+  
   /* Text */
   --text-4xl: 2.375em; /* 36px */
   --text-3xl: 2em; /* 32px */
@@ -214,9 +214,9 @@
   --text-lg: 1.25em; /* 20px */
   --text-md: 1.125em; /* 18px */
   --text-base: 16px; /* 16px */
-  --text-sm: max(13px, 0.875em); /* 14px */
-  --text-xs: max(12px, 0.75em); /* 12px */
-  --text-2xs: max(10px, 0.625em); /* 10px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-xs: 0.75rem; /* 12px */
+  --text-2xs: 0.625rem; /* 10px */
 
   /* font-weight */
   --font-thin: 100;
@@ -237,5 +237,21 @@
   --rounded-xl: 1.5em;
   --rounded-circle: 50%;
   --rounded-full: 10em;
+
+  /* ==================== */
+  /* Spacing Scale (gap / padding / margin) */
+  /* ==================== */
+  --space-4xs: 2px;
+  --space-3xs: 4px;
+  --space-2xs: 6px;
+  --space-xs: 8px;
+  --space-sm: 0.625rem; /* 10px */
+  --space-md: 0.75rem; /* 12px */
+  --space-lg: 0.875rem; /* 14px */
+  --space-xl: 1em;
+  --space-2xl: 1.25em;
+  --space-3xl: 1.5em;
+  --space-4xl: 2em;
+
 
 }

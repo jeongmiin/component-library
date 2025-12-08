@@ -129,10 +129,54 @@
           </div>
         </div>
       </section>
+
+      <!--  text Section -->
+      <section id="colors" class="mb-12">
+        <div class="bg-white rounded-lg shadow-sm p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">타이포그레피 | Typography</h2>
+          <div class="mb-10">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+              Heading 
+            </h3>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
+              <div class="text-sm text-gray-500 mb-2 font-medium">Primary</div>
+              <div class="flex flex-col gap-5">
+                <h2 class="text-h2">Heading H2</h2>
+                <h3 class="text-h3">Heading H3</h3>
+                <h4 class="text-h4">Heading H4</h4>
+                <h5 class="text-h5">Heading H5</h5>
+                <h6 class="text-h6">Heading H6</h6>
+              </div>
+            </div>
+          </div>
+          <div class="mb-10">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+              Typography
+            </h3>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
+              <div class="text-sm text-gray-500 mb-2 font-medium">Primary</div>
+              <div class="flex flex-col gap-5">
+                <p class="text-4xl">Typography - 4xl - 36px</p>
+                <p class="text-3xl">Typography - 3xl - 32px</p>
+                <p class="text-2xl">Typography - 2xl - 28px</p>
+                <p class="text-xl">Typography - xl - 24px</p>
+                <p class="text-lg">Typography - lg - 20px</p>
+                <p class="text-md">Typography - md - 18px</p>
+                <p class="text-base">Typography - base - 16px</p>
+                <p class="text-sm">Typography - sm - 14px</p>
+                <p class="text-xs">Typography - xs - 12px</p>
+                <p class="text-2xs">Typography - 2xs - 10px</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Buttons Section -->
       <section id="buttons" class="mb-12">
         <div class="bg-white rounded-lg shadow-sm p-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-3 flex items-center gap-2">버튼 <span class="font-normal">|</span> <span class="text-xs">Buttons</span></h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-3 flex items-center gap-2">버튼 | Buttons</h2>
           <p class="text-gray-600 mb-8">버튼 컴포넌트 - 사용자 액션을 트리거하는 UI 요소입니다.</p>
 
           <!-- 기본 버튼 -->
@@ -142,15 +186,6 @@
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
               <div class="flex items-center gap-4">
                 <button type="button" class="btn_base primary">버튼</button>
-              </div>
-            </div>
-            <div class="code_accordion_header">
-              <span>코드 보기</span>
-              <i class="ph ph-caret-down code_accordion_icon"></i>
-            </div>
-            <div class="code_accordion_content">
-              <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
-                <pre class="text-sm text-gray-100"><code>&lt;/button&gt; type="button" class="btn_base primary"&gt;버튼&lt;/button&gt;</code></pre>
               </div>
             </div>
           </div>
@@ -196,7 +231,6 @@
             <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
               <div class="flex items-center gap-4">
-                <button type="button" class="btn_base xs primary">x-small 버튼</button>
                 <button type="button" class="btn_base sm primary">small 버튼</button>
                 <button type="button" class="btn_base md primary">medium 버튼</button>
                 <button type="button" class="btn_base lg primary">large 버튼</button>
@@ -244,8 +278,8 @@
             <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
               <div class="flex items-center gap-4">
-                <button type="button" class="btn_base ghost">버튼: 텍스트</button>
-                <a href="#" class="btn_base link">버튼: 링크</a>
+                <button type="button" class="btn_base lg ghost">버튼: 텍스트</button>
+                <a href="#" class="btn_base lg link">버튼: 링크</a>
               </div>
             </div>
             <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
@@ -323,11 +357,7 @@
                     <td>.subtle</td>
                   </tr>
                   <tr>
-                    <th scope="row" rowspan="5">사이즈</th>
-                    <th scope="row">더 작게</th>
-                    <td>.xs</td>
-                  </tr>
-                  <tr>
+                    <th scope="row" rowspan="4">사이즈</th>
                     <th scope="row">작게</th>
                     <td>.sm</td>
                   </tr>
@@ -378,19 +408,23 @@
 
             <div class="bg-white border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
-              <div class="grid grid-cols-3 gap-4">
+              <div class="grid grid-cols-4 gap-4">
                 <!-- 기본 -->
                 <div class="input_field">
-                  <label for="input_basic" class="input_label">Label</label>
+                  <label for="input_basic" class="input_label">sm 인풋</label>
                   <input id="input_basic" type="text" class="input_base sm" placeholder="입력하세요."/>
                 </div>
                 <div class="input_field">
-                  <label for="input_basic" class="input_label">Label (기본 사이즈)</label>
+                  <label for="input_basic" class="input_label">md 인풋</label>
                   <input id="input_basic" type="text" class="input_base md" placeholder="입력하세요."/>
                 </div>
                 <div class="input_field">
-                  <label for="input_basic" class="input_label">Label</label>
+                  <label for="input_basic" class="input_label">lg 인풋</label>
                   <input id="input_basic" type="text" class="input_base lg" placeholder="입력하세요."/>
+                </div>
+                <div class="input_field">
+                  <label for="input_basic" class="input_label">xl 인풋</label>
+                  <input id="input_basic" type="text" class="input_base xl" placeholder="입력하세요."/>
                 </div>
               </div>
             </div>
@@ -434,9 +468,9 @@
                   <p class="field_message error">* 메세지 위치 입니다.</p>
                 </div>
                 <div class="input_field">
-                  <label for="in_btn" class="input_label with_action">
+                  <label for="in_btn" class="input_label !flex justify-between">
                     라벨 옆 버튼
-                    <button class="btn_base sm primary">버튼</button>
+                    <button type="button" class="btn_base sm primary">버튼</button>
                   </label>
                   <input id="in_btn" type="text" class="input_base" placeholder=" ">
                 </div>
@@ -550,15 +584,15 @@
               <div class="flex gap-4">
                 <!-- 기본 -->
                 <div class="check_field">
-                  <input id="check_04" type="checkbox" class="check_base md" checked/>
+                  <input id="check_04" type="checkbox" class="check_base" checked/>
                   <label for="check_04" class="check_label">선택</label>
                 </div>
                 <div class="check_field">
-                  <input id="check_05" type="checkbox" class="check_base md" />
+                  <input id="check_05" type="checkbox" class="check_base" />
                   <label for="check_05" class="check_label">선택 전</label>
                 </div>
                 <div class="check_field">
-                  <input id="check_06" type="checkbox" class="check_base md" disabled/>
+                  <input id="check_06" type="checkbox" class="check_base" disabled/>
                   <label for="check_06" class="check_label">비활성화</label>
                 </div>
               </div>
@@ -582,14 +616,13 @@
             </div>
           </div>
 
-          <div class="mb-10">
+          <!-- <div class="mb-10">
             <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
               사이즈
             </h3>
             <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
               <div class="flex gap-4">
-                <!-- 기본 -->
                 <div class="check_field">
                   <input id="check_01" type="checkbox" class="check_base sm" checked/>
                   <label for="check_01" class="check_label">sm 체크박스</label>
@@ -604,24 +637,7 @@
                 </div>
               </div>
             </div>
-
-            <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
-<pre class="text-sm text-gray-100"><code>&lt;div class="check_field"&gt;
-  &lt;input id="check_01" type="checkbox" class="check_base sm" checked/&gt;
-  &lt;label for="check_01" class="check_label"&gt;sm 체크박스&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-<br>
-<pre class="text-sm text-gray-100"><code>&lt;div class="check_field"&gt;
-  &lt;input id="check_02" type="checkbox" class="check_base md" checked/&gt;
-  &lt;label for="check_02" class="check_label"&gt;md 체크박스&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-<br>
-<pre class="text-sm text-gray-100"><code>&lt;div class="check_field"&gt;
-  &lt;input id="check_03" type="checkbox" class="check_base lg" checked/&gt;
-  &lt;label for="check_03" class="check_label"&gt;lg 체크박스&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div>
+          </div> -->
 
           <div class="mb-10">
             <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
@@ -845,14 +861,13 @@
             </div>
           </div>
 
-                    <div class="mb-10">
+          <!-- <div class="mb-10">
             <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
               사이즈
             </h3>
             <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
               <div class="flex gap-4">
-                <!-- 기본 -->
                 <div class="check_field">
                   <input id="radio04" type="radio" class="check_base sm" checked/>
                   <label for="radio04" class="check_label">sm 라디오버튼</label>
@@ -867,24 +882,7 @@
                 </div>
               </div>
             </div>
-
-            <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
-<pre class="text-sm text-gray-100"><code>&lt;div class="check_field"&gt;
-  &lt;input id="radio04" type="radio" class="check_base sm" checked/&gt;
-  &lt;label for="radio04" class="check_label"&gt;sm 라디오버튼&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-<br>
-<pre class="text-sm text-gray-100"><code>&lt;div class="check_field"&gt;
-  &lt;input id="radio05" type="radio" class="check_base md" checked/&gt;
-  &lt;label for="radio05" class="check_label"&gt;md 라디오버튼&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-<br>
-<pre class="text-sm text-gray-100"><code>&lt;div class="check_field"&gt;
-  &lt;input id="radio06" type="radio" class="check_base lg" checked/&gt;
-  &lt;label for="radio06" class="check_label"&gt;lg 라디오버튼&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div>
+          </div> -->
 
           <div class="mb-10">
             <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
@@ -915,28 +913,28 @@
                 <!-- 기본 Radio Chips -->
                 <div class="chip_field">
                   <input type="radio" id="radio_chip1" name="radio_chip_group1" checked>
-                  <label for="radio_chip1" class="chip_label">
+                  <label for="radio_chip1" class="chip_label md">
                     <i class="ph ph-check"></i>
                     선택됨
                   </label>
                 </div>
                 <div class="chip_field">
                   <input type="radio" id="radio_chip2" name="radio_chip_group1">
-                  <label for="radio_chip2" class="chip_label">
+                  <label for="radio_chip2" class="chip_label md">
                     <i class="ph ph-check"></i>
                     옵션 2
                   </label>
                 </div>
                 <div class="chip_field">
                   <input type="radio" id="radio_chip3" name="radio_chip_group1">
-                  <label for="radio_chip3" class="chip_label">
+                  <label for="radio_chip3" class="chip_label md">
                     <i class="ph ph-check"></i>
                     옵션 3
                   </label>
                 </div>
                 <div class="chip_field">
                   <input type="radio" id="radio_chip4" name="radio_chip_group1" disabled>
-                  <label for="radio_chip4" class="chip_label">
+                  <label for="radio_chip4" class="chip_label md">
                     <i class="ph ph-check"></i>
                     비활성화
                   </label>
@@ -1237,7 +1235,7 @@
                 <li class="card_item">
                   <a href="#" class="card_link">
                     <div class="card_head">
-                      <h4 class="btn_base secondary xs !rounded-full">필독</h4>
+                      <h4 class="badge_base text secondary sm">필독</h4>
                       <p class="card_date">2024.01.15</p>
                     </div>
                     <div class="card_body">
@@ -1251,7 +1249,7 @@
                 <li class="card_item">
                   <a href="#" class="card_link">
                     <div class="card_head">
-                      <h4 class="btn_base neutral xs !rounded-full">공지</h4>
+                      <h4 class="badge_base text tertiary sm">공지</h4>
                       <p class="card_date">2024.01.14</p>
                     </div>
                     <div class="card_body">
@@ -1342,10 +1340,10 @@
             <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
                 <div class="flex items-center gap-3">
-                  <div class="badge_base primary sm">11</div>
-                  <div class="badge_base primary">22</div>
-                  <div class="badge_base primary lg">33</div>
-                  <div class="badge_base primary sm">44</div>
+                  <div class="badge_base primary xs">11</div>
+                  <div class="badge_base primary sm">22</div>
+                  <div class="badge_base primary md">33</div>
+                  <div class="badge_base primary lg">44</div>
                 </div>
             </div>
           </div>
@@ -1356,10 +1354,10 @@
             <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
                 <div class="flex items-center gap-3">
-                  <div class="badge_base text primary">primary</div>
-                  <div class="badge_base text secondary">secondary</div>
-                  <div class="badge_base text tertiary">tertiary</div>
-                  <div class="badge_base text disabled">disabled</div>
+                  <div class="badge_base text primary sm">primary</div>
+                  <div class="badge_base text secondary sm">secondary</div>
+                  <div class="badge_base text tertiary md">tertiary</div>
+                  <div class="badge_base text disabled lg">disabled</div>
                 </div>
             </div>
           </div>
