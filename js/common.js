@@ -38,35 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // 페이지 로드 시 초기 활성화
     updateActiveNav();
 
-  // 코드 아코디언 초기화
-  // 모든 코드 블록을 찾아서 아코디언으로 변환
-  const codeBlocks = document.querySelectorAll('.bg-gray-900.rounded-lg.p-5.overflow-x-auto');
-
-  codeBlocks.forEach(block => {
-    // 이미 아코디언으로 래핑되어 있는지 확인
-    if (block.parentElement.classList.contains('code_accordion_content')) {
-      return;
+  // 코드 아코디언 클릭 이벤트
+  document.addEventListener('click', function(e) {
+    const header = e.target.closest('.code_accordion_header');
+    if (header) {
+      const content = header.nextElementSibling;
+      if (content && content.classList.contains('code_accordion_content')) {
+        header.classList.toggle('active');
+        content.classList.toggle('active');
+      }
     }
-
-    // 아코디언 헤더 생성
-    const header = document.createElement('div');
-    header.className = 'code_accordion_header';
-    header.innerHTML = '<span>코드 보기</span><i class="ph ph-caret-down code_accordion_icon"></i>';
-
-    // 아코디언 컨텐츠 래퍼 생성
-    const content = document.createElement('div');
-    content.className = 'code_accordion_content';
-
-    // 기존 코드 블록을 컨텐츠로 이동
-    block.parentNode.insertBefore(header, block);
-    block.parentNode.insertBefore(content, block);
-    content.appendChild(block);
-
-    // 클릭 이벤트 추가
-    header.addEventListener('click', function() {
-      this.classList.toggle('active');
-      content.classList.toggle('active');
-    });
   });
 
   // 비밀번호 Toggle 버튼

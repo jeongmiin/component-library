@@ -90,11 +90,6 @@
   --surface-950: var(--gray-950);
 
   /* ==================== */
-  /* Shadow / Overlay */
-  /* ==================== */
-  --shadow-primary: 0px 4px 10px 0px rgba(0,0,0,0.08);
-
-  /* ==================== */
   /* Background Colors */
   /* ==================== */
   /* 기본 배경 (Neutral Backgrounds) */
@@ -133,47 +128,44 @@
   --text-secondary: var(--surface-700);
   --text-tertiary: var(--surface-500);
   --text-disabled: var(--surface-400);
-
   /* 반전 텍스트 (Inverse Text) */
   --text-inverse: var(--wh);
   --text-inverse-secondary: var(--surface-50);
-
   /* 브랜드 컬러 텍스트 (Brand Text) */
   --text-brand: var(--primary-500);
   --text-brand-strong: var(--primary-600);
-
   /* 상태 텍스트 (State Text) - 확장 가능 */
   --text-danger: var(--red-500);
   --text-warning: var(--yellow-700);
   --text-success: var(--blue-500);
   --text-information: var(--blue-600);
 
-
   /* ==================== */
   /* Border Colors */
   /* ==================== */
-  /* 기본 보더 (Neutral Borders) - 연함 → 진함 순서 */
+  /* 기본 보더 (Neutral Borders) */
   --border-default: var(--surface-50);
   --border-primary: var(--surface-100);
   --border-secondary: var(--surface-200);
   --border-tertiary: var(--surface-300);
   --border-disabled: var(--surface-200);
-
   /* 반전 보더 (Inverse Borders) */
   --border-inverse: var(--surface-800);
   --border-inverse-secondary: var(--surface-700);
-
   /* 브랜드 컬러 보더 (Brand Borders) */
   --border-brand: var(--primary-500);
   --border-brand-strong: var(--primary-400);
   --border-brand-subtle: var(--primary-200);
-
   /* 상태 보더 (State Borders) - 확장 가능 */
   --border-danger: var(--red-500);
   --border-warning: var(--yellow-500);
   --border-success: var(--blue-500);
   --border-information: var(--blue-600);
 
+  /* ==================== */
+  /* Shadow / Overlay */
+  /* ==================== */
+  --shadow-primary: 0px 4px 10px 0px rgba(0,0,0,0.08);
 
   /* ==================== */
   /* Icon Colors */
@@ -182,17 +174,13 @@
   --icon-default: var(--surface-500);
   --icon-subtle: var(--surface-400);
   --icon-disabled: var(--surface-300);
-
   /* 반전 아이콘 (Inverse Icons) */
   --icon-inverse: var(--wh);
-
   /* 강조 아이콘 (Emphasis Icons) */
   --icon-emphasis: var(--primary-500);
-
   /* 인터랙티브 아이콘 (Interactive Icons) */
   --icon-interactive: var(--primary-500);
   --icon-interactive-hover: var(--primary-600);
-  
   /* 상태 아이콘 (State Icons) - 확장 가능 */
   --icon-danger: var(--red-500);
   --icon-warning: var(--yellow-600);
@@ -200,23 +188,23 @@
   --icon-information: var(--blue-600);
 
   /* Heading Text */
-  --text-h2: 2.375em; /* 36px */
+  --text-h2: 2.25rem; /* 36px */
   --text-h3: 2em; /* 32px */
   --text-h4: 1.75em; /* 28px */
   --text-h5: 1.5em; /* 24px */
   --text-h6: 1.25em; /* 20px */
   
   /* Text */
-  --text-4xl: 2.375em; /* 36px */
-  --text-3xl: 2em; /* 32px */
-  --text-2xl: 1.75em; /* 28px */
-  --text-xl: 1.5em; /* 24px */
-  --text-lg: 1.25em; /* 20px */
-  --text-md: 1.125em; /* 18px */
-  --text-base: 16px; /* 16px */
-  --text-sm: 0.875rem; /* 14px */
-  --text-xs: 0.75rem; /* 12px */
-  --text-2xs: 0.625rem; /* 10px */
+  --text-2xs: 0.625rem;  /* 10px */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-md: 1.125rem;   /* 18px */
+  --text-lg: 1.25rem;    /* 20px */
+  --text-xl: 1.5rem;     /* 24px */
+  --text-2xl: 1.75rem;   /* 28px */
+  --text-3xl: 2rem;      /* 32px */
+  --text-4xl: 2.25rem;   /* 36px */
 
   /* font-weight */
   --font-thin: 100;
@@ -229,11 +217,19 @@
   --font-extrabold: 800;
   --font-black: 900;
 
+  /* line-height */
+  --leading-base: 1rem;
+  --leading-xs: 1.2rem;
+  --leading-sm: 1.25rem;
+  --leading-md: 1.35rem;
+  --leading-lg: 1.375rem;
+  --leading-xl: 1.5rem;
+
   /* border-radius */
-  --rounded-xs: 4px;
-  --rounded-sm: 6px;
-  --rounded-md: 8px;
-  --rounded-lg: 1em;
+  --rounded-xs: 0.25rem; /* 4px */
+  --rounded-sm: 0.375rem; /* 6px */
+  --rounded-md: 0.5rem; /* 8px */
+  --rounded-lg: 1rem;
   --rounded-xl: 1.5em;
   --rounded-circle: 50%;
   --rounded-full: 10em;
@@ -241,17 +237,27 @@
   /* ==================== */
   /* Spacing Scale (gap / padding / margin) */
   /* ==================== */
-  --space-4xs: 2px;
-  --space-3xs: 4px;
-  --space-2xs: 6px;
-  --space-xs: 8px;
+  --space-4xs: 0.125rem; /* 2px */
+  --space-3xs: 0.25rem; /* 4px */
+  --space-2xs: 0.375rem; /* 6px */
+  --space-xs: 0.5rem; /* 8px */
   --space-sm: 0.625rem; /* 10px */
   --space-md: 0.75rem; /* 12px */
   --space-lg: 0.875rem; /* 14px */
-  --space-xl: 1em;
-  --space-2xl: 1.25em;
-  --space-3xl: 1.5em;
-  --space-4xl: 2em;
+  --space-xl: 1rem;
+  --space-2xl: 1.25rem;
+  --space-3xl: 1.5rem;
+  --space-4xl: 2rem;
 
+}
 
+/* ==================== */
+/* 반응형 타이포그래피 */
+/* ==================== */
+@media (max-width: 1024px) {
+  :root {
+    --text-2xs: 0.75rem;
+    --text-xs: 0.875rem;
+    --text-sm: 0.95rem;
+  }
 }
