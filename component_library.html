@@ -88,7 +88,7 @@
     </aside>
 
     <!-- 메인 콘텐츠 -->
-    <main class="ml-64 flex-1 p-8 max-w-8xl">
+    <main class="ml-64 flex-1 p-8 min-w-4xl">
       <!--  color Section -->
       <section id="colors" class="mb-12">
         <div class="bg-white rounded-lg shadow-sm p-8">
@@ -504,7 +504,7 @@
 
             <div class="bg-white border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
-              <div class="grid grid-cols-3 gap-4">
+              <div class="grid grid-cols-4 gap-4 items-end">
                 <div class="input_field">
                   <label for="input_basic" class="input_label">Label</label>
                   <input id="input_basic" type="text" class="input_base" placeholder="입력하세요."/>
@@ -534,7 +534,7 @@
                 </div>
                 <div class="input_field">
                   <label for="call" class="input_label">휴대폰번호</label>
-                  <div class="flex items-center gap-2">
+                  <div class="flex items-center gap-1">
                     <input id="call01" type="text" class="input_base" placeholder="">
                     -
                     <input id="call02" type="text" class="input_base" placeholder="">
@@ -542,7 +542,7 @@
                     <input id="call02" type="text" class="input_base" placeholder="">
                   </div>
                 </div>
-                <div class="input_field flex flex-wrap gap-x-3">
+                <div class="input_field flex flex-wrap gap-3">
                   <label for="fileBizDoc" class="input_label w-full">첨부파일</label>
                   <div class="file_upload_area">
                     <div class="preview_item"></div>
@@ -1061,14 +1061,25 @@
 
             <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
-              <div class="com_field">
-                <label for="select01" class="input_label">Select Label</label>
-                <select name="select01" id="select01" class="input_base">
-                  <option value="val05">select option1</option>
-                  <option value="val06">select option2</option>
-                  <option value="val07">select option3</option>
-                  <option value="val08">select option4</option>
-                </select>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="com_field">
+                  <label for="select01" class="input_label">Select Label</label>
+                  <select name="select01" id="select01" class="input_base">
+                    <option value="val05">select option1</option>
+                    <option value="val06">select option2</option>
+                    <option value="val07">select option3</option>
+                    <option value="val08">select option4</option>
+                  </select>
+                </div>
+                <div class="com_field">
+                  <label for="select01" class="input_label">Select Label</label>
+                  <select name="select01" id="select01" class="input_base" disabled>
+                    <option value="val05">select option1</option>
+                    <option value="val06">select option2</option>
+                    <option value="val07">select option3</option>
+                    <option value="val08">select option4</option>
+                  </select>
+                </div>
               </div>
               
 
@@ -1081,9 +1092,9 @@
 
             <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
-              <div class="flex flex-col gap-4">
+              <div class="grid grid-cols-3 gap-4">
                 <div class="com_field">
-                  <label for="select02" class="input_label">sm 셀렉트</label>
+                  <label for="select02" class="input_label">sm Select</label>
                   <select name="select02" id="select02" class="input_base sm">
                     <option value="val0201">select option1</option>
                     <option value="val0202">select option2</option>
@@ -1091,7 +1102,7 @@
                   </select>
                 </div>
                 <div class="com_field">
-                  <label for="select03" class="input_label">md 셀렉트</label>
+                  <label for="select03" class="input_label">md Select</label>
                   <select name="select03" id="select03" class="input_base md">
                     <option value="val0301">select option1</option>
                     <option value="val0302">select option2</option>
@@ -1099,7 +1110,7 @@
                   </select>
                 </div>
                 <div class="com_field">
-                  <label for="select04" class="input_label">lg 셀렉트</label>
+                  <label for="select04" class="input_label">lg Select</label>
                   <select name="select04" id="select04" class="input_base lg">
                     <option value="val0401">select option1</option>
                     <option value="val0402">select option2</option>
@@ -1115,29 +1126,11 @@
             <div class="code_accordion_content">
               <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
                 <pre class="text-sm text-gray-100"><code>&lt;div class="com_field"&gt;
-  &lt;label for="select02" class="input_label"&gt;sm 셀렉트&lt;/label&gt;
-  &lt;select name="select02" id="select02" class="input_base sm"&gt;
-    &lt;option value="val0201"&gt;select option1&lt;/option&gt;
-    &lt;option value="val0202"&gt;select option2&lt;/option&gt;
-    &lt;option value="val0203"&gt;select option3&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
-
-&lt;div class="com_field"&gt;
   &lt;label for="select03" class="input_label"&gt;md 셀렉트&lt;/label&gt;
   &lt;select name="select03" id="select03" class="input_base md"&gt;
     &lt;option value="val0301"&gt;select option1&lt;/option&gt;
     &lt;option value="val0302"&gt;select option2&lt;/option&gt;
     &lt;option value="val0303"&gt;select option3&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
-
-&lt;div class="com_field"&gt;
-  &lt;label for="select04" class="input_label"&gt;lg 셀렉트&lt;/label&gt;
-  &lt;select name="select04" id="select04" class="input_base lg"&gt;
-    &lt;option value="val0401"&gt;select option1&lt;/option&gt;
-    &lt;option value="val0402"&gt;select option2&lt;/option&gt;
-    &lt;option value="val0403"&gt;select option3&lt;/option&gt;
   &lt;/select&gt;
 &lt;/div&gt;</code></pre>
               </div>
@@ -1158,9 +1151,15 @@
 
             <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
               <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
-              <div class="input_field">
-                <label for="textarea_base" class="input_label">Textarea</label>
-                <textarea id="textarea_base" class="input_base md"></textarea>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="input_field">
+                  <label for="textarea_base" class="input_label">Textarea</label>
+                  <textarea id="textarea_base" class="input_base md"></textarea>
+                </div>
+                <div class="input_field">
+                  <label for="textarea_base" class="input_label">Textarea</label>
+                  <textarea id="textarea_base" class="input_base md" disabled></textarea>
+                </div>
               </div>
             </div>
           </div>
@@ -1185,6 +1184,18 @@
                   <label for="lgtextarea" class="input_label">lg Textarea</label>
                   <textarea id="lgtextarea" class="input_base lg"></textarea>
                 </div>
+              </div>
+            </div>
+            <div class="code_accordion_header">
+              <span>코드 보기</span>
+              <i class="ph ph-caret-down code_accordion_icon"></i>
+            </div>
+            <div class="code_accordion_content">
+              <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
+                <pre class="text-sm text-gray-100"><code>&lt;div class="input_field"&gt;
+  &lt;label for="textarea_base" class="input_label"&gt;Textarea&lt;/label&gt;
+  &lt;textarea id="textarea_base" class="input_base md"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
               </div>
             </div>
           </div>
@@ -1248,7 +1259,7 @@
                 </div>
               </section>  
             
-              <div class="flex flex-col gap-4 mt-4">
+              <div class="flex gap-4 mt-4">
                 <div class="modal_box" style="position: static; transform: translate(0);">
                   <div class="modal_text">텍스트 위치입니다.</div>
                   <div class="modal_btn">
