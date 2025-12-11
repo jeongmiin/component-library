@@ -71,6 +71,7 @@
             <li><a href="#typography" class="nav-link">Typography</a></li>
             <li><a href="#buttons" class="nav-link">Buttons</a></li>
             <li><a href="#input" class="nav-link">Input</a></li>
+            <li><a href="#textarea" class="nav-link">Textarea</a></li>
             <li><a href="#checkbox" class="nav-link">Checkbox</a></li>
             <li><a href="#radio" class="nav-link">Radio Button</a></li>
             <li><a href="#select" class="nav-link">Select</a></li>
@@ -1145,7 +1146,52 @@
         </div>
       </section>
 
-       <!-- Tooltip Section -->
+      <!-- Textarea Section -->
+      <section id="textarea" class="mb-12">
+        <div class="bg-white rounded-lg shadow-sm p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">텍스트에어리어 | Textarea</h2>
+          <p class="text-gray-600 mb-8"><strong>텍스트에어리어(Textarea)는</strong> 긴 텍스트나 여러 줄의 내용을 입력받는 데 사용하며, sm부터 xl까지 크기를 설정합니다.</p>
+          <div class="mb-10">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+              기본
+            </h3>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
+              <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
+              <div class="input_field">
+                <label for="textarea_base" class="input_label">Textarea</label>
+                <textarea id="textarea_base" class="input_base md"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="mb-10">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+              사이즈
+            </h3>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
+              <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
+              <div class="flex flex-col gap-3">
+                <div class="input_field">
+                  <label for="smtextarea" class="input_label">sm Textarea</label>
+                  <textarea id="smtextarea" class="input_base sm"></textarea>
+                  <p class="field_message error">* 최소 10자 이상 입력해주세요.</p>
+                </div>
+                <div class="input_field">
+                  <label for="mdtextarea" class="input_label">md Textarea</label>
+                  <textarea id="mdtextarea" class="input_base md"></textarea>
+                </div>
+                <div class="input_field">
+                  <label for="lgtextarea" class="input_label">lg Textarea</label>
+                  <textarea id="lgtextarea" class="input_base lg"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tooltip Section -->
       <section id="tooltip" class="mb-12">
         <div class="bg-white rounded-lg shadow-sm p-8">
           <h2 class="text-3xl font-bold text-gray-900 mb-3">툴팁 | Tooltip</h2>
