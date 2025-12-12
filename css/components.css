@@ -104,7 +104,7 @@ input[type="button"].btn_base{ height: var(--height-md);}
 .input_base:focus { border-color: var(--input-border-focus);}
 .input_base:disabled { background-color: var(--disabled-bg); color: var(--disabled-text); cursor: not-allowed;}
 /* bottom_line 스타일 */
-.input_base.bottom_line { border: 0; border-bottom: 1px solid var(--input-border); border-radius: 0; padding-left: 0; padding-right: 0;}
+.input_base.bottom_line { background-color: transparent; border: 0; border-bottom: 1px solid var(--input-border); border-radius: 0; padding-left: 0; padding-right: 0;}
 .input_base.bottom_line:focus { border-bottom-color: var(--input-border-focus);}
 
 /* Input 사이즈 */
@@ -142,7 +142,7 @@ select.input_base { appearance: none; background-image: url("data:image/svg+xml,
 textarea.input_base { display: block; height: auto; min-height: var(--height-3xl); padding: var(--space-xs); resize: vertical; line-height: var(--leading-lg); box-sizing: border-box;}
 textarea.input_base.sm { height: auto; min-height: var(--height-2xl); padding: var(--space-xs);}
 textarea.input_base.md { height: auto; min-height: var(--height-3xl); padding: var(--space-xs);}
-textarea.input_base.lg { height: auto; min-height: var(--height-4xl); padding: var(--space-sm);}
+textarea.input_base.lg { height: auto; min-height: var(--height-4xl); padding: var(--space-sm); border-radius: var(--rounded-sm);}
 
 /* ==================== */
 /* Checkbox & Radio    */
