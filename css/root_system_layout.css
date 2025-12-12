@@ -159,9 +159,8 @@
   /* ==================== */
   /* Spinner / Loading */
   /* ==================== */
-  --spinner-bg: var(--surface-200);
-  --spinner-color: var(--primary-500);
-
+  --spinner-bg: var(--surface-300);
+  --spinner-brand-bg: var(--primary-500);
 
   /* ==================== */
   /* Badge Component */
@@ -179,5 +178,12 @@
   --badge-tertiary-bg: var(--wh);
   --badge-tertiary-text: var(--surface-600);
   --badge-tertiary-border: var(--surface-200);
+
+  --badge-success: var(--green-300);
+  --badge-error: var(--red-300);
+  --badge-pending: var(--purple-200);
+  --badge-warning: var(--yellow-300);
+  --badge-info: var(--blue-300);
+  --badge-neutral: var(--surface-200);
 
 }

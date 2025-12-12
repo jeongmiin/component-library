@@ -50,6 +50,18 @@
   --blue-900: #143A81;
   --blue-950: #0F2D62;
 
+  --green-50: #F5FFFA;
+  --green-100: #E9F6F0;
+  --green-200: #D1EEE2;
+  --green-300: #6AC9A2;
+  --green-400: #6AC9A2;
+  --green-500: #4EB389;
+  --green-600: #22A06B;
+  --green-700: #1F9261;
+  --green-800: #18724C;
+  --green-900: #13583B;
+  --green-950: #0E432D;
+
   --yellow-50: #FFFBED;
   --yellow-100: #FFF4D2;
   --yellow-200: #FFEAAC;
@@ -61,6 +73,19 @@
   --yellow-800: #8C742A;
   --yellow-900: #6B5820;
   --yellow-950: #463810;
+
+  --purple-50: #F9F3FF;
+  --purple-100: #ECE0F9;
+  --purple-200: #D0B6E6;
+  --purple-300: #B992DA;
+  --purple-400: #9860C9;
+  --purple-500: #7E34BD;
+  --purple-600: #6612AF;
+  --purple-700: #5D109F;
+  --purple-800: #480D7C;
+  --purple-900: #380A60;
+  --purple-950: #2B084A;
+
 
   /* ==================== */
   /* primary color    */
