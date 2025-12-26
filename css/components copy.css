@@ -32,11 +32,8 @@
 .btn_wrap{display: flex; flex-wrap: wrap; gap: var(--space-3xs);}
 .btn_base{ font-weight: var(--font-semibold); line-height: var(--leading-base); display: inline-flex; align-items: center; justify-content: center; border-radius: var(--rounded-xs); padding: 0 var(--space-md); transition: all 0.2s; border: 1px solid transparent; margin: 0 !important; cursor: pointer; word-break: keep-all; text-decoration: none !important;}
 input[type="button"].btn_base{ height: var(--height-md);}
+
 /* Size */
-.btn_base.xs{
-  height: var(--height-xs); font-size: var(--text-xs); padding: 0 var(--space-xs); border-radius: var( --rounded-2xs);
-  & i{ font-size: var(--text-2xs);}
-}
 .btn_base.sm{
   height: var(--height-sm); font-size: var(--text-xs); padding: 0 var(--space-xs);
   & i{ font-size: var(--text-xs);}
@@ -68,7 +65,7 @@ input[type="button"].btn_base{ height: var(--height-md);}
 /* Primary - 가장 중요한 액션 (CTA) */
 .btn_base.primary{
   background-color: var(--btn-primary-bg); color: var(--btn-primary-text);
-  & i{color: inherit;}
+  & i, &:hover  i{color: var(--btn-primary-text);}
   &:hover{background-color: var(--btn-primary-bg-hover);}
   &:active{background-color: var(--btn-primary-bg-pressed);}
 }
@@ -76,7 +73,7 @@ input[type="button"].btn_base{ height: var(--height-md);}
 /* Secondary - 보조 액션, outline 스타일 */
 .btn_base.secondary{
   background-color: var(--btn-secondary-bg); border-color: var(--btn-secondary-border); color: var(--btn-secondary-text);
-  & i{color: inherit;}
+  & i, &:hover  i{color: var(--btn-secondary-text);}
   &:hover{background-color: var(--btn-secondary-bg-hover);}
   &:active{background-color: var(--btn-secondary-bg-pressed);}
 }
@@ -84,7 +81,7 @@ input[type="button"].btn_base{ height: var(--height-md);}
 /* Tertiary - 세 번째 우선순위 */
 .btn_base.tertiary{
   background-color: var(--btn-tertiary-bg); border-color: var(--btn-tertiary-border); color: var(--btn-tertiary-text);
-  & i{color: inherit;}
+  & i, &:hover i{color: var(--btn-tertiary-text);}
   &:hover{background-color: var(--btn-tertiary-bg-hover);}
   &:active{background-color: var(--btn-tertiary-bg-pressed);}
 }
@@ -92,7 +89,7 @@ input[type="button"].btn_base{ height: var(--height-md);}
 /* Inverse - 반전 스타일 (어두운 배경) */
 .btn_base.inverse{
   background-color: var(--btn-inverse-bg); color: var(--btn-inverse-text);
-  & i{color: inherit;}
+  & i, &:hover i{color: var(--btn-inverse-text);}
   &:hover{background-color: var(--btn-inverse-bg-hover);}
   &:active{background-color: var(--btn-inverse-bg-pressed);}
 }
@@ -100,121 +97,77 @@ input[type="button"].btn_base{ height: var(--height-md);}
 /* Neutral - 중립적인 액션 */
 .btn_base.neutral{
   background-color: var(--btn-neutral-bg); color: var(--btn-neutral-text);
-  & i{color: inherit;}
+  & i, &:hover i{color: var(--btn-neutral-text);}
   &:hover{background-color: var(--btn-neutral-bg-hover);}
 }
 
 /* Subtle - 시각적 강조도가 낮은 버튼 */
 .btn_base.subtle{
   background-color: var(--btn-subtle-bg); border-color: var(--btn-subtle-border); color: var(--btn-subtle-text);
-  & i{color: inherit;}
+  & i, &:hover i{color: var(--btn-subtle-text);}
   &:hover{background-color: var(--btn-subtle-bg-hover);}
   &:active{background-color: var(--btn-subtle-bg-pressed);}
 }
 
 /* Ghost - 보더/배경 없음 */
-.btn_base.ghost{ 
-  height: auto; background-color: var(--btn-ghost-bg); color: var(--btn-ghost-text); border: 0; padding: 0;
-  & i{ color: inherit;}
-  &:hover{ background-color: var(--btn-ghost-bg-hover); color: var(--btn-ghost-text-hover);}
-  &:active{ color: var(--btn-ghost-text-pressed);}
-  &.lg{ font-size: var(--text-base);}
-  &.md{ font-size: var(--text-sm);}
-  &.sm{ font-size: var(--text-xs);}
+.btn_base.ghost{
+  height: auto; background-color: var(--btn-ghost-bg); color: var(--btn-ghost-text); border: 0;
+  & i{color: var(--btn-ghost-text);}
+  &:hover{background-color: var(--btn-ghost-bg-hover); color: var(--btn-ghost-text-hover);}
+  &:hover i{color: var(--btn-ghost-text-hover);}
 }
 
 /* Link - 텍스트 링크 스타일 */
-.btn_base.link{ 
-  height: auto; line-height: var(--leading-lg); background-color: var(--btn-link-bg); color: var(--btn-link-text); padding: 0 !important;
-  & i{ color: inherit;}
-  & span{ position: relative;
-    &::before{ content: ""; display: block; width: 100%; height: 1px; background-color: currentColor; position: absolute; bottom: 0; left: 0;}
-  }
-  &:hover{ color: var(--btn-link-text-hover);}
-  &:active{ color: var(--btn-link-text-pressed);}
-  &.visited:not(&:hover, &:active){
-    color: var(--btn-link-visited-text);
-    & span::before{background-color: currentColor;}
-  }
-  &.lg{font-size: var(--text-base);}
-  &.md{font-size: var(--text-sm);}
-  &.sm{ font-size: var(--text-xs); line-height: var(--leading-xs);}
+.btn_base.link{
+  height: auto; background-color: var(--btn-link-bg); color: var(--btn-link-text); padding: 0 !important; text-decoration: underline !important;
+  & i{color: var(--btn-link-text);}
+  &:hover{color: var(--btn-link-text-hover);}
+  &:hover i{color: var(--btn-link-text-hover);}
 }
 
 /* Disabled */
 .btn_base:disabled,
-.btn_base:disabled:hover{ background-color: var(--disabled-bg); color: var(--disabled-text); border-color: var(--disabled-border); cursor: not-allowed;}
-.btn_base.ghost:disabled{ background-color: transparent; color: var(--disabled-text);}
-.btn_base.link.disabled{ 
-  background-color: transparent; color: var(--disabled-text); border: none; cursor: not-allowed;
-  & span::before{background-color: currentColor;}
-}
+.btn_base:disabled:hover{background-color: var(--disabled-bg); color: var(--disabled-text); border-color: var(--disabled-border); cursor: not-allowed;}
 
 
 /* ==================== */
 /* Input Field    */
 /* ==================== */
 /* 기본 Input */
-.input_field { 
-  position: relative; width: 100%; margin-bottom: var(--space-lg);}
-.input_label { 
-  display: flex; flex-wrap: wrap; align-items: center; font-size: var(--text-sm); font-weight: var(--font-bold); color: var(--input-label); margin-bottom: var(--space-xs);
-  & .hint{font-size: var(--text-xs); font-weight: var(--font-medium); line-height: var(--leading-xl); display: block; width: 100%; color: var(--input-hint); margin-top: var(--space-3xs);}
-}
-.input_base {
-  height: var(--height-md); font-size: var(--text-xs); padding: 0 var(--space-md); border-radius: var(--rounded-xs); width: 100%; border: 1px solid var(--input-border);  outline: none; box-sizing: border-box; color: var(--input-text); background-color: var(--input-bg); transition: all 0.2s;
-  &::placeholder { color: var(--input-placeholder); font-size: inherit; font-weight: var(--font-medium); text-decoration: none;}
-  &:focus::placeholder { color: transparent;}
-  &:focus { border: 2px solid var(--input-border-focus);}
-  &:disabled { background-color: var(--disabled-bg); color: var(--disabled-text); cursor: not-allowed;}
-  /* bottom_line 스타일 */
-  &.bottom_line {
-    background-color: transparent; border: 0; border-bottom: 1px solid var(--input-border); border-radius: 0; padding-left: 0; padding-right: 0;
-    &:focus { border-bottom: 2px solid var(--input-border-focus);}
-  }
-}
+.input_field { position: relative; width: 100%; margin-bottom: var(--space-md, 1em);}
+.input_label { font-size: var(--text-sm); color: var(--input-label); display: block; margin-bottom: var(--space-2xs, 0.25em);}
+.input_base { height: var(--height-md); font-size: var(--text-xs); padding: 0 var(--space-xs); border-radius: var(--rounded-xs); width: 100%; border: 1px solid var(--input-border);  outline: none; box-sizing: border-box; color: var(--input-text); background-color: var(--input-bg); transition: all 0.2s;}
+.input_base::placeholder { color: var(--input-placeholder); font-size: inherit; text-decoration: none;}
+.input_base:focus::placeholder { color: transparent;}
+.input_base:focus { border-color: var(--input-border-focus);}
+.input_base:disabled { background-color: var(--disabled-bg); color: var(--disabled-text); cursor: not-allowed;}
+/* bottom_line 스타일 */
+.input_base.bottom_line { background-color: transparent; border: 0; border-bottom: 1px solid var(--input-border); border-radius: 0; padding-left: 0; padding-right: 0;}
+.input_base.bottom_line:focus { border-bottom-color: var(--input-border-focus);}
 
 /* Input 사이즈 */
 .input_base.sm { height: var(--height-sm); font-size: var(--text-xs); padding: 0 var(--space-xs);}
 .input_base.md { height: var(--height-md); font-size: var(--text-sm); }
-.input_base.lg { height: var(--height-lg); font-size: var(--text-base); padding: 0 var(--space-xl); border-radius: var(--rounded-sm);}
-.input_base.xl { height: var(--height-xl); font-size: var(--text-base); padding: 0 var(--space-xl); border-radius: var(--rounded-md);}
+.input_base.lg { height: var(--height-lg); font-size: var(--text-base); padding: 0 var(--space-sm); border-radius: var(--rounded-sm);}
+.input_base.xl { height: var(--height-xl); font-size: var(--text-base); padding: 0 var(--space-md); border-radius: var(--rounded-md);}
 
 /* Field 정보 메시지 */
-.field_message {
-  display: none; align-items: baseline; gap: var(--space-3xs);  font-size: var(--text-xs);  font-weight: var(--font-medium); color: var(--input-message); position: absolute; top: calc(100% + var(--space-xs)); left: 0; width: 100%;
-  & i {font-size: var(--text-sm); color: inherit;}
-  &.error { color: var(--input-message-error);}
-  &.success { color: var(--input-message-success);}
-}
-.input_field:has(.input_base:focus) .field_message { display: flex;} 
-
-/* 인풋 안 아이콘 */
-.input_with_icon{
-  position: relative; display: flex; align-items: center; width: 100%;
-   & .input_base{padding-right: 3em;}
-  & i{position: absolute; top: 50%; right: var(--space-xl); transform: translateY(-50%); color: var(--icon-default);}
-  & .input_base.sm{
-    padding-right: var(--space-4xl);
-    & + i{right: var(--space-xs);}
-  }
-  & .input_base.md{
-    padding-right: 2.75em;
-    & + i{right: var(--space-md);}
-  }
-}
+.field_message { display: none; font-size: var(--text-xs); position: absolute; top: calc(100% + 3px); left: 0; width: 100%;}
+.input_field:has(.input_base:focus) .field_message { display: block;}
+.field_message.error { color: var(--text-danger);}
+.field_message.success { color: var(--text-brand-strong);} 
 
 /* 파일 업로드 */
 .file_upload_area{position: relative; width: 100%; max-width: 6.25rem; aspect-ratio: 1/1;}
 .base_table .file_upload_area{aspect-ratio: 1/1; max-width: 100%;}
-.file_upload_area .input_base{position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid var(--border-primary); border-radius: var(--rounded-xs); color: transparent; z-index: 1; background-color: rgba(255,255,255,0.5); cursor: pointer; margin-top: 0 !important;}
+.file_upload_area .input_base{position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px dotted var(--border-primary); border-radius: var(--rounded-md); color: transparent; z-index: 1; background-color: rgba(255,255,255,0.5); cursor: pointer; margin-top: 0 !important;}
 .file_upload_area .input_base::after{content: "\e61e"; font-family: "Phosphor"; position: absolute; top: 40%; left: 50%; transform: translate(-50%,-50%); font-size: var(--text-4xl); color: var(--icon-subtle); font-weight: var(--font-medium);}
-.file_upload_area .input_base::before{content: "UPLOAD"; font-size: var(--text-xs); font-weight: var(--font-semibold); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); padding-top: 4em; color: var(--text-tertiary);}
+.file_upload_area .input_base::before{content: "UPLOAD"; font-size: var(--text-xs); font-weight: var(--font-semibold); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); padding-top: 4em; color: var(--text-disabled);}
 .file_upload_area .input_base:hover{border-color: var(--border-brand);}
 .file_upload_area .input_base:hover::before,
 .file_upload_area .input_base:hover::after{color: var(--icon-interactive);}
 .file_upload_area .input_base::file-selector-button { display: none;}
-.file_upload_area .preview_item .preview{position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-primary); background-color :rgba(255,255,255,0.5); border-radius :var(--rounded-xs);}
+.file_upload_area .preview_item .preview{position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-primary); background-color: rgba(255,255,255,0.5); border-radius: var(--rounded-sm);}
 .file_upload_area .preview_item img{width: 92%; max-height: 92%; object-fit: contain; text-align: center;}
 .file_upload_area .preview_item .btn_base{position: absolute; top: 0; right: 0; z-index: 1; }
 .file_upload_area .preview_item:has(.preview){ position: relative; width: 100%; height: 100%; border-radius: var(--rounded-sm); text-align: center; }
@@ -234,31 +187,22 @@ textarea.input_base.lg { height: auto; min-height: var(--height-4xl); padding: v
 /* ==================== */
 .check_field { position: relative; display: flex; align-items: anchor-center; gap: var(--space-xs, 0.5em);}
 .check_label { cursor: pointer; font-size: var(--text-sm); color: var(--input-label); flex: 1; -webkit-user-select: none; user-select: none;}
+
 /* Checkbox */
-.check_field input[type="checkbox"] {
-  -webkit-appearance: none; appearance: none; position: relative; height: var(--height-xs); aspect-ratio: 1/1; vertical-align: middle; cursor: pointer; outline: none; background-color: var(--checkbox-bg); border: 1px solid var(--checkbox-border); padding: 0; border-radius: var(--rounded-xs); transition: all 0.2s;
-  &.check_base {
-    &::before { content: "\e182"; font-family: "Phosphor"; font-size: var(--text-xs); font-weight: bold; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: transparent; transition: color 0.2s;}
-    &:hover { border-color: var(--checkbox-border-checked);}
-    &:checked {
-      background-color: var(--checkbox-bg-checked); border-color: var(--checkbox-border-checked);
-      &::before { color: var(--wh);}
-    }
-    &:disabled { background-color: var(--disabled-bg); border-color: var(--disabled-border); cursor: not-allowed; opacity: 0.6;}
-  }
-}
+.check_field input[type="checkbox"] { -webkit-appearance: none; appearance: none; position: relative; height: var(--height-xs); aspect-ratio: 1/1; vertical-align: middle; cursor: pointer; outline: none; background-color: var(--checkbox-bg); border: 1px solid var(--checkbox-border); padding: 0; border-radius: var(--rounded-xs); transition: all 0.2s}
+.check_field input[type="checkbox"].check_base::before { content: "\e182"; font-family: "Phosphor"; font-size: var(--text-xs); font-weight: bold; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: transparent; transition: color 0.2s;}
+.check_field input[type="checkbox"].check_base:hover { border-color: var(--checkbox-border-checked);}
+.check_field input[type="checkbox"].check_base:checked { background-color: var(--checkbox-bg-checked); border-color: var(--checkbox-border-checked);}
+.check_field input[type="checkbox"].check_base:checked::before { color: var(--wh);}
+.check_field input[type="checkbox"].check_base:disabled { background-color: var(--disabled-bg); border-color: var(--disabled-border); cursor: not-allowed; opacity: 0.6;}
 .check_field:has(input[type="checkbox"].check_base:disabled) .check_label { cursor: not-allowed; color: var(--disabled-text);}
 /* Radio Button */
-.check_field input[type="radio"] {
-  -webkit-appearance: none; appearance: none; position: relative; height: var(--height-xs); aspect-ratio: 1/1; vertical-align: middle; cursor: pointer; outline: none; background-color: var(--radio-bg); border: 1px solid var(--radio-border); padding: 0; border-radius: var(--rounded-circle); transition: all 0.2s;
-  &::before { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; width: 0.625em; height: 0.625em; border-radius: var(--rounded-circle); transition: background-color 0.2s;}
-  &:hover { border-color: var(--radio-border-checked);}
-  &:checked {
-    border-color: var(--radio-border-checked);
-    &::before { background-color: var(--radio-bg-checked);}
-  }
-  &:disabled { background-color: var(--disabled-bg); border-color: var(--disabled-border); cursor: not-allowed; opacity: 0.6;}
-}
+.check_field input[type="radio"] { -webkit-appearance: none; appearance: none; position: relative; height: var(--height-xs); aspect-ratio: 1/1; vertical-align: middle; cursor: pointer; outline: none; background-color: var(--radio-bg); border: 1px solid var(--radio-border); padding: 0; border-radius: var(--rounded-circle); transition: all 0.2s;}
+.check_field input[type="radio"]::before { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; width: 0.625em; height: 0.625em; border-radius: var(--rounded-circle); transition: background-color 0.2s;}
+.check_field input[type="radio"]:hover { border-color: var(--radio-border-checked);}
+.check_field input[type="radio"]:checked { border-color: var(--radio-border-checked);}
+.check_field input[type="radio"]:checked::before { background-color: var(--radio-bg-checked);}
+.check_field input[type="radio"]:disabled { background-color: var(--disabled-bg); border-color: var(--disabled-border); cursor: not-allowed; opacity: 0.6;}
 .check_field:has(input[type="radio"]:disabled) .check_label { cursor: not-allowed; color: var(--disabled-text);}
 
 
@@ -333,7 +277,7 @@ textarea.input_base.lg { height: auto; min-height: var(--height-4xl); padding: v
 /* Tab Content          */
 /* ==================== */
 .tab_list{display: flex; flex-wrap: wrap; margin-bottom: -1px;}
-.tab_list .tab_item{ flex: 1; transition: all 0.2s; margin-right: -1px; border-bottom: 0.18em solid var(--tab-text);}
+.tab_list .tab_item{ flex: 1; transition: all 0.2s; margin-right: -1px; border-bottom: 0.18em solid var(--tab-text);}  /* 기존: --tab-base → --tab-text */
 .tab_list .tab_item .inner{ font-size: var(--text-sm); line-height: var(--leading-md); display: block; width: 100%; height: 100%; padding: var(--space-lg); text-align: center; color: var(--text-secondary);}
 .tab_list .tab_item:hover,
 .tab_list .tab_item.active{ color: var(--tab-text-active); border-color: var(--tab-text-active);}
@@ -364,8 +308,8 @@ textarea.input_base.lg { height: auto; min-height: var(--height-4xl); padding: v
 .base_table th,
 .base_table td { font-size: var(--text-sm); line-height: var(--leading-xl); border: 1px solid var(--table-border); padding: var(--table-spacing-sm) var(--table-spacing-md); text-align: left; vertical-align: middle;}
 .base_table thead th { background-color: var(--table-bg-header); color: var(--text-primary); font-weight: var(--font-semibold); text-align: center; white-space: nowrap;}
-.base_table tbody td { background-color: var(--table-bg); color: var(--table-text); font-weight: var(--font-medium);}
-.base_table tbody tr:hover td { background-color: var(--table-bg-hover); color: var(--table-text-hover);}
+.base_table tbody td { background-color: var(--table-bg); color: var(--table-text); font-weight: var(--font-medium);} 
+.base_table tbody tr:hover td { background-color: var(--table-bg-hover); color: var(--table-text-hover);} 
 .base_table tbody th { background-color: var(--table-bg-header); font-weight: var(--font-semibold); text-align: center;} 
 
 /* 반응형 */

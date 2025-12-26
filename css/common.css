@@ -7,7 +7,11 @@ body{font-family: 'Pretendard'; font-size: 1rem; font-variant-numeric: tabular-n
 .nav-link { display: block; padding: 10px 15px; text-decoration: none; border-radius: 5px; transition: all 0.2s; font-size: 14px; color: var(--text-secondary);}
 .nav-link:hover { background-color: var(--bg-primary); color: var(--text-brand);}
 .nav-link.active { background-color: var(--bg-brand); color: var(--text-inverse); font-weight: 600;}
-
+.site_nav{border-bottom: 1px solid var(--border-primary);}
+.site_nav ul li a{display: block; height: 3rem; line-height: 3rem; padding: 0 1rem; font-weight: var(--font-semibold);}
+.site_nav ul li.active a{color: var(--text-brand);}
+.site_nav ul li{position: relative; display: flex; align-items: center; justify-content: center;}
+.site_nav ul li + li::before{content: ""; display: block; width: 1px; height: 1rem; background-color: var(--bg-secondary);}
 /* 테이블 스타일 */
 table.table-fixed {
   width: 100%;
