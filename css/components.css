@@ -224,16 +224,18 @@ input[type="button"].btn_base{ height: var(--height-md);}
 select.input_base { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23565868' d='M6 9L1 4h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75em center; padding-right: 2.5em !important; cursor: pointer;}
 
 /* Textarea */
-textarea.input_base { display: block; height: auto; min-height: var(--height-3xl); padding: var(--space-xs); resize: vertical; line-height: var(--leading-lg); box-sizing: border-box;}
-textarea.input_base.sm { height: auto; min-height: var(--height-2xl); padding: var(--space-xs);}
+textarea.input_base { display: block; height: auto; min-height: var(--height-4xl); padding: var(--space-xs); resize: vertical; line-height: var(--leading-lg); box-sizing: border-box; border-radius: var(--rounded-sm);}
+/* textarea.input_base.sm { height: auto; min-height: var(--height-2xl); padding: var(--space-xs);}
 textarea.input_base.md { height: auto; min-height: var(--height-3xl); padding: var(--space-xs);}
-textarea.input_base.lg { height: auto; min-height: var(--height-4xl); padding: var(--space-sm); border-radius: var(--rounded-sm);}
+textarea.input_base.lg { height: auto; min-height: var(--height-4xl); padding: var(--space-sm); border-radius: var(--rounded-sm);} */
+.char_count{ position: absolute; top: calc(100% + var(--space-xs)); right: 0; font-size: var(--text-sm); color: var(--text-secondary); text-align: right;}
+.char_count .count{color:  var(--text-danger);}
 
 /* ==================== */
 /* Checkbox & Radio    */
 /* ==================== */
 .check_field { position: relative; display: flex; align-items: anchor-center; gap: var(--space-xs, 0.5em);}
-.check_label { cursor: pointer; font-size: var(--text-sm); color: var(--input-label); flex: 1; -webkit-user-select: none; user-select: none;}
+.check_label { cursor: pointer; font-size: var(--text-sm); font-weight: var(--font-medium); color: var(--input-label); flex: 1; -webkit-user-select: none; user-select: none;}
 /* Checkbox */
 .check_field input[type="checkbox"] {
   -webkit-appearance: none; appearance: none; position: relative; height: var(--height-xs); aspect-ratio: 1/1; vertical-align: middle; cursor: pointer; outline: none; background-color: var(--checkbox-bg); border: 1px solid var(--checkbox-border); padding: 0; border-radius: var(--rounded-xs); transition: all 0.2s;
@@ -244,7 +246,10 @@ textarea.input_base.lg { height: auto; min-height: var(--height-4xl); padding: v
       background-color: var(--checkbox-bg-checked); border-color: var(--checkbox-border-checked);
       &::before { color: var(--wh);}
     }
-    &:disabled { background-color: var(--disabled-bg); border-color: var(--disabled-border); cursor: not-allowed; opacity: 0.6;}
+    &:disabled {
+      background-color: var(--disabled-bg); border-color: var(--disabled-border); cursor: not-allowed;
+      &:checked::before { color: var(--disabled-text);}
+    }
   }
 }
 .check_field:has(input[type="checkbox"].check_base:disabled) .check_label { cursor: not-allowed; color: var(--disabled-text);}
@@ -257,7 +262,10 @@ textarea.input_base.lg { height: auto; min-height: var(--height-4xl); padding: v
     border-color: var(--radio-border-checked);
     &::before { background-color: var(--radio-bg-checked);}
   }
-  &:disabled { background-color: var(--disabled-bg); border-color: var(--disabled-border); cursor: not-allowed; opacity: 0.6;}
+  &:disabled { 
+    background-color: var(--disabled-bg); border-color: var(--disabled-border); cursor: not-allowed;
+    &:checked::before { background-color: var(--disabled-text);}
+  }
 }
 .check_field:has(input[type="radio"]:disabled) .check_label { cursor: not-allowed; color: var(--disabled-text);}
 
@@ -280,10 +288,10 @@ textarea.input_base.lg { height: auto; min-height: var(--height-4xl); padding: v
 /* ==================== */
 .chip_field { position: relative; display: inline-flex;}
 .chip_field input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0;}
-.chip_label { height: var(--height-md); font-size: var(--text-xs); display: inline-flex; align-items: center; gap: var(--space-xs); padding: 0 var(--space-xs); border: 1px solid var(--chip-border); border-radius: var(--rounded-full); background-color: var(--chip-bg); color: var(--chip-text); font-size: var(--text-sm); cursor: pointer; transition: all 0.2s; -webkit-user-select: none; user-select: none;}
-.chip_label:hover { border-color: var(--chip-border-hover); background-color: var(--chip-bg-hover);}
+.chip_label { font-size: var(--text-sm); font-weight: var(--font-bold); height: var(--height-md); display: inline-flex; align-items: center; gap: var(--space-xs); padding: 0 var(--space-md); border: 1px solid var(--chip-border); border-radius: var(--rounded-full); background-color: var(--chip-bg); color: var(--chip-text); cursor: pointer; transition: all 0.2s; -webkit-user-select: none; user-select: none;}
+.chip_label:hover { color: var(--chip-text-hover); border-color: var(--chip-border-hover); background-color: var(--chip-bg-hover); }
 .chip_field input[type="checkbox"]:checked ~ .chip_label { background-color: var(--chip-bg-checked); border-color: var(--chip-border-checked); color: var(--chip-text-checked);}
-.chip_field input[type="checkbox"]:disabled ~ .chip_label { background-color: var(--disabled-bg); border-color: var(--disabled-border); color: var(--disabled-text); cursor: not-allowed; opacity: 0.6;}
+.chip_field input[type="checkbox"]:disabled ~ .chip_label { background-color: var(--disabled-bg); border-color: var(--disabled-border); color: var(--disabled-text); cursor: not-allowed;}
 /* Chip with icon */
 .chip_label i { font-size: 1em; transition: opacity 0.2s;}
 .chip_field input[type="checkbox"]:not(:checked) ~ .chip_label i.ph-check { display: none;}
@@ -292,25 +300,24 @@ textarea.input_base.lg { height: auto; min-height: var(--height-4xl); padding: v
 /* Radio Chip - 라디오 버튼 스타일 Chips */
 .chip_field input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0;}
 .chip_field input[type="radio"]:checked ~ .chip_label { background-color: var(--chip-bg-checked); border-color: var(--chip-border-checked); color: var(--chip-text-checked);}
-.chip_field input[type="radio"]:disabled ~ .chip_label { background-color: var(--disabled-bg); border-color: var(--disabled-border); color: var(--disabled-text); cursor: not-allowed; opacity: 0.6;}
+.chip_field input[type="radio"]:disabled ~ .chip_label { background-color: var(--disabled-bg); border-color: var(--disabled-border); color: var(--disabled-text); cursor: not-allowed;}
 .chip_field input[type="radio"]:not(:checked) ~ .chip_label i.ph-check { display: none;}
 .chip_field input[type="radio"]:checked ~ .chip_label i.ph-check { display: inline-block;}
 
 /* Chip 크기 */
 .chip_label.sm { height: var(--height-sm); font-size: var(--text-xs);}
-.chip_label.md { height: var(--height-md); font-size: var(--text-xs);}
-.chip_label.lg { height: var(--height-lg); font-size: var(--text-sm); padding: 0 var(--space-sm); }
+.chip_label.md { height: var(--height-md);}
+.chip_label.lg { height: var(--height-lg); padding: 0 var(--space-xl); }
 
 /* ==================== */
 /* Tooltip              */
 /* ==================== */
 .tooltip_field{font-size: var(--text-base); position: relative; display: inline-flex; align-items: center; gap: var(--space-3xs);}
-.tooltip_field .tooltip_btn{cursor: pointer; font-size: var(--text-lg); color: var(--text-secondary);}
-.tooltip_content { opacity: 0; font-size: var(--text-xs); line-height: var(--leading-sm); font-weight: var(--font-semibold); width: max-content; max-width: 28.125em; padding: var(--space-3xs) var(--space-md); border-radius: var(--rounded-xs); border: 1px solid transparent; position: absolute; top: 50%; left: calc(100% + var(--space-3xs)); transform: translateY(-50%); z-index: -1; box-shadow: 0px 0.125em 1px 0px rgba(80,80,80,0.2); background-color: var(--bg-default); transition: all 0.3s;}
+.tooltip_field .tooltip_btn{cursor: pointer; font-size: var(--text-lg); color: var(--tooltip-icon);}
+.tooltip_content { opacity: 0; z-index: -1; font-size: var(--text-xs); line-height: var(--leading-lg); font-weight: var(--font-semibold); width: max-content; max-width: 28.125em; height: var(--height-sm); display: flex; align-items: center; padding: 0 var(--space-xs); border-radius: var(--rounded-xs); position: absolute; top: 50%; left: calc(100% + var(--space-3xs)); transform: translateY(-50%); box-shadow: 0px 0.125em 1px 0px rgba(80,80,80,0.2); background-color: var(--tooltip-bg); border: 1px solid var(--tooltip-border); color: var(--tooltip-text); transition: all 0.3s;}
 .tooltip_field .tooltip_btn:hover + .tooltip_content{opacity: 1; z-index: 1;}
-.tooltip_field i{color: var(--icon-default);}
-.tooltip_field .tooltip_btn:hover{color: var(--text-brand-strong);}
-.tooltip_field .tooltip_content{ border-color: var(--border-secondary);}
+.tooltip_field i{color: var(--tooltip-icon);}
+.tooltip_field .tooltip_btn:hover{color: var(--tooltip-icon-hover);}
 
 /* ==================== */
 /* Modal & Bottom modal */

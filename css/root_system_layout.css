@@ -11,7 +11,7 @@
   --height-xl: 3.5rem; 
   --height-2xl: 4.375rem;
   --height-3xl: 6.25rem;
-  --height-4xl: 7.5rem;
+  --height-4xl: 7.75rem;
 
   /* ==================== */
   /* System States */
@@ -150,14 +150,14 @@
 
   /* Chip (Box Checkbox & Radio) */
   --chip-bg: var(--wh);                 
-  --chip-bg-hover: var(--primary-50);      
   --chip-border: var(--surface-300);    
-  --chip-border-hover: var(--primary-200); 
   --chip-text: var(--surface-600);      
+  --chip-bg-hover: var(--primary-50);      
+  --chip-border-hover: var(--primary-400); 
+  --chip-text-hover: var(--primary-600); 
   --chip-bg-checked: var(--primary-500);
   --chip-border-checked: var(--primary-500); 
   --chip-text-checked: var(--wh);
-
 
   /* ==================== */
   /* State: Disabled */
@@ -165,7 +165,16 @@
   --disabled-bg: var(--surface-200);
   --disabled-text: var(--surface-500);
   --disabled-border: var(--surface-300);
- 
+
+  /* ==================== */
+  /* tooltip              */
+  /* ==================== */
+  --tooltip-icon: var(--surface-400);
+  --tooltip-icon-hover: var(--primary-500);
+  --tooltip-bg: var(--wh);
+  --tooltip-text: var(--primary-600);
+  --tooltip-border: var(--primary-300);
+
 
   /* ==================== */
   /* Spinner / Loading */

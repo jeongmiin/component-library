@@ -71,10 +71,10 @@
             <li><a href="#typography" class="nav-link">Typography</a></li>
             <li><a href="#buttons" class="nav-link">Buttons</a></li>
             <li><a href="#input" class="nav-link">Input</a></li>
-            <li><a href="#textarea" class="nav-link">Textarea</a></li>
             <li><a href="#checkbox" class="nav-link">Checkbox</a></li>
             <li><a href="#radio" class="nav-link">Radio Button</a></li>
             <li><a href="#select" class="nav-link">Select</a></li>
+            <li><a href="#textarea" class="nav-link">Textarea</a></li>
             <li><a href="#tooltip" class="nav-link">Tooltip</a></li>
             <li><a href="#modals" class="nav-link">Modals</a></li>
             <li><a href="#bottom_modal" class="nav-link">Bottom Modal</a></li>
@@ -864,6 +864,10 @@
                     <input id="check_06" type="checkbox" class="check_base" disabled/>
                     <label for="check_06" class="check_label">비활성화</label>
                   </div>
+                  <div class="check_field">
+                    <input id="check_06" type="checkbox" class="check_base" disabled checked/>
+                    <label for="check_06" class="check_label">선택 비활성화</label>
+                  </div>
                 </div>
               </div>
 
@@ -937,7 +941,7 @@
                       <input type="checkbox" id="switch3" disabled>
                       <span class="switch_track"></span>
                     </label>
-                    <p class="check_label">비활성화 상태</p>
+                    <p class="check_label">비활성화</p>
                   </div>
                 </div>
               </div>
@@ -1077,16 +1081,20 @@
                 <div class="flex gap-4">
                   <!-- 기본 -->
                   <div class="check_field">
-                    <input id="radio01" name="radio" type="radio" class="check_base md" checked/>
+                    <input id="radio01" name="radio01" type="radio" class="check_base md" checked/>
                     <label for="radio01" class="check_label">선택</label>
                   </div>
                   <div class="check_field">
-                    <input id="radio02" name="radio" type="radio" class="check_base md"/>
+                    <input id="radio02" name="radio01" type="radio" class="check_base md"/>
                     <label for="radio02" class="check_label">선택 전</label>
                   </div>
                   <div class="check_field">
-                    <input id="radio03" name="radio" type="radio" class="check_base md" disabled/>
+                    <input id="radio03" name="radio02" type="radio" class="check_base md" disabled/>
                     <label for="radio03" class="check_label">비활성화</label>
+                  </div>
+                  <div class="check_field">
+                    <input id="radio03" name="radio02" type="radio" class="check_base md" disabled checked/>
+                    <label for="radio03" class="check_label">선택 비활성화</label>
                   </div>
                 </div>
               </div>
@@ -1255,8 +1263,11 @@
               <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
                 <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
                 <div class="grid grid-cols-2 gap-4">
-                  <div class="com_field">
-                    <label for="select01" class="input_label">Select Label</label>
+                  <div class="input_field">
+                    <label for="select01" class="input_label justify-between">
+                      레이블
+                      <span class="hint">입력 시 필요한 정보를 입력해주세요</span>  
+                    </label>
                     <select name="select01" id="select01" class="input_base">
                       <option value="val05">select option1</option>
                       <option value="val06">select option2</option>
@@ -1264,14 +1275,18 @@
                       <option value="val08">select option4</option>
                     </select>
                   </div>
-                  <div class="com_field">
-                    <label for="select01" class="input_label">Select Label</label>
-                    <select name="select01" id="select01" class="input_base" disabled>
+                  <div class="input_field">
+                    <label for="select02" class="input_label justify-between">
+                      레이블
+                      <span class="hint">입력 시 필요한 정보를 입력해주세요</span>  
+                    </label>
+                    <select name="select02" id="select02" class="input_base" disabled>
                       <option value="val05">select option1</option>
                       <option value="val06">select option2</option>
                       <option value="val07">select option3</option>
                       <option value="val08">select option4</option>
                     </select>
+                    <p class="field_message" style="display: flex;"><i class="ph-fill ph-info"></i> 메세지 위치 입니다.</p>
                   </div>
                 </div>
                 
@@ -1345,18 +1360,27 @@
               <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
                 <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
                 <div class="grid grid-cols-2 gap-4">
-                  <div class="input_field">
-                    <label for="textarea_base" class="input_label">Textarea</label>
-                    <textarea id="textarea_base" class="input_base md"></textarea>
-                  </div>
-                  <div class="input_field">
-                    <label for="textarea_base" class="input_label">Textarea</label>
-                    <textarea id="textarea_base" class="input_base md" disabled></textarea>
-                  </div>
+                  <fieldset class="input_field">
+                    <label for="textarea_base" class="input_label justify-between">
+                      레이블
+                      <span class="hint">입력 시 필요한 정보를 입력해주세요</span>  
+                    </label>
+                    <textarea id="textarea_base" class="input_base" placeholder="내용을 입력하세요"></textarea>
+                    <div class="char_count"><span class="count">1</span>/100</div>
+                  </fieldset>
+                  <fieldset class="input_field" disabled>
+                    <label for="textarea_base02" class="input_label justify-between">
+                      레이블
+                      <span class="hint">입력 시 필요한 정보를 입력해주세요</span>  
+                    </label>
+                    <textarea id="textarea_base02" class="input_base" placeholder="내용을 입력하세요"></textarea>
+                    <p class="field_message" style="display: flex;"><i class="ph-fill ph-info"></i> 메세지 위치 입니다.</p>
+                    <div class="char_count"><span class="count">1</span>/100</div>
+                  </fieldset>
                 </div>
               </div>
             </div>
-            <div class="mb-10">
+            <!-- <div class="mb-10">
               <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
                 사이즈
               </h3>
@@ -1391,7 +1415,7 @@
   &lt;/div&gt;</code></pre>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </section>
 
@@ -1407,9 +1431,15 @@
               <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
                 <div class="text-sm text-gray-700 mb-4 font-medium">Preview</div>
                 <!-- 기본 -->
-                <div class="tooltip_field">
-                  <span class="material-symbols-outlined filled tooltip_btn">info</span>
-                  <div class="tooltip_content">※ 툴팁 내용입니다.</div>
+                <div class="inline-flex flex-col gap-2">
+                  <div class="tooltip_field">
+                    <i class="ph-fill ph-info tooltip_btn"></i>
+                    <div class="tooltip_content">※ 툴팁 내용입니다.</div>
+                  </div>
+                  <div class="tooltip_field">
+                    <i class="ph-fill ph-info tooltip_btn" style="color: var(--tooltip-icon-hover);"></i>
+                    <div class="tooltip_content" style="opacity: 1; z-index: 1;">※ 툴팁 내용입니다.</div>
+                  </div>
                 </div>
               </div>
               <div class="code_accordion_header">
