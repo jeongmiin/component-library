@@ -78,10 +78,12 @@
             <li><a href="#tooltip" class="nav-link">Tooltip</a></li>
             <li><a href="#modals" class="nav-link">Modals</a></li>
             <li><a href="#bottom_modal" class="nav-link">Bottom Modal</a></li>
+            <li><a href="#dialog_modal" class="nav-link">Dialog Modal</a></li>
             <li><a href="#tabs" class="nav-link">Tabs</a></li>
             <li><a href="#card" class="nav-link">Cards</a></li>
             <li><a href="#tables" class="nav-link">Tables</a></li>
             <li><a href="#badge" class="nav-link">Badge</a></li>
+            <li><a href="#tag" class="nav-link">Tag</a></li>
             <li><a href="#spinners" class="nav-link">Spinners</a></li>
           </ul>
         </nav>
@@ -416,7 +418,7 @@
 
             <!-- 속성 -->
             <div class="mb-10">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4"> CSS 셀렉터</h3>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4"> CSS 커스텀 셀렉터</h3>
 
               <div class="base_table_container">
                 <table class="base_table">
@@ -582,7 +584,7 @@
 
               <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
                 <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
-                <div class="grid grid-cols-2 gap-4 items-end">
+                <div class="grid grid-cols-2 gap-4 items-start">
                   <fieldset class="input_field">
                     <label for="in_btn1" class="input_label justify-between">
                       레이블
@@ -1344,6 +1346,50 @@
                 </div>
               </div>
             </div>
+            <div class="mb-10">
+              <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+                텍스트
+              </h3>
+
+              <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
+                <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
+                <div class="flex gap-4">
+                  <div class="com_field">
+                    <select name="select02" id="select02" class="input_base text_select sm">
+                      <option value="val02000">레이블</option>
+                      <option value="val02010">sm text select option1</option>
+                      <option value="val02020">sm text select option2</option>
+                      <option value="val02030">sm text select option3</option>
+                    </select>
+                  </div>
+                  <div class="com_field">
+                    <select name="select03" id="select03" class="input_base text_select md">
+                      <option value="val03000">레이블</option>
+                      <option value="val03010">md text select option1</option>
+                      <option value="val03020">md text select option2</option>
+                      <option value="val03030">md text select option3</option>
+                    </select>
+                  </div>
+                  <div class="com_field">
+                    <select name="select04" id="select04" class="input_base text_select lg">
+                      <option value="val04000">레이블</option>
+                      <option value="val04010">lg text select option1</option>
+                      <option value="val04020">lg text select option2</option>
+                      <option value="val04030">lg text select option3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="code_accordion_header">
+                <span>코드 보기</span>
+                <i class="ph ph-caret-down code_accordion_icon"></i>
+              </div>
+              <div class="code_accordion_content">
+                <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
+                  <pre class="text-sm text-gray-100"></pre>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -1472,15 +1518,15 @@
                 <div class="text-sm text-gray-700 mb-4 font-medium">Preview</div>
                 <button type="button" class="btn_base primary lg w-full" data-modal="modal_01">클릭</button>
                 <!-- 기본 -->
-                <section class="modal_wrap" id="modal_01">
+                <div class="modal_wrap" id="modal_01">
                   <div class="modal_box">
                     <div class="modal_text">텍스트 위치입니다.</div>
                     <div class="modal_btn">
-                      <button type="button" class="btn_base md neutral">아니요</button>
-                      <button type="button" class="btn_base md secondary">예</button>
+                      <button type="button" class="btn_base md neutral" onclick="modal_01.close()">아니요</button>
+                      <button type="button" class="btn_base md secondary" onclick="modal_01.close()">예</button>
                     </div>
                   </div>
-                </section>  
+                </div>  
               
                 <div class="flex gap-4 mt-4">
                   <div class="modal_box" style="position: static; transform: translate(0);">
@@ -1497,23 +1543,6 @@
                     </div>
                   </div>
 
-                </div>
-              </div>
-              <div class="code_accordion_header">
-                <span>코드 보기</span>
-                <i class="ph ph-caret-down code_accordion_icon"></i>
-              </div>
-              <div class="code_accordion_content">
-                <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
-                  <pre class="text-sm text-gray-100"><code>&lt;section class="modal_wrap" id="modal_01"&gt;
-    &lt;div class="modal_box"&gt;
-      &lt;div class="modal_text"&gt;텍스트 위치입니다.&lt;/div&gt;
-      &lt;div class="modal_btn"&gt;
-        &lt;button type="button" class="btn_base md neutral"&gt;아니요&lt;/button&gt;
-        &lt;button type="button" class="btn_base md secondary"&gt;예&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;</code></pre>
                 </div>
               </div>
             </div>
@@ -1535,7 +1564,7 @@
                 <!-- 기본  -->
                 <button type="button" class="btn_base primary lg w-full" data-modal="modal_bottom_01"> 클릭</button>
                 <!-- modal_wrap.bottom 클래스에 .active 붙으면서 노출 -->
-                <section class="modal_wrap bottom" id="modal_bottom_01">
+                <div class="modal_wrap bottom" id="modal_bottom_01">
                   <div class="modal_box">
                     <div class="modal_title">타이틀 위치</div>
                     <div class="modal_content">
@@ -1546,7 +1575,7 @@
                       <button type="button" class="btn_base secondary lg w-full modal_close_btn">확인</button>
                     </div>
                   </div>
-                </section>
+                </div>
                 <div class="mt-4">
                   <div class="modal_box bottom" style="position: static; transform: translate(0);">
                   <div class="modal_title">타이틀 위치</div>
@@ -1559,24 +1588,88 @@
                 </div>
                 </div>
               </div>
-              <div class="code_accordion_header">
-                <span>코드 보기</span>
-                <i class="ph ph-caret-down code_accordion_icon"></i>
-              </div>
-              <div class="code_accordion_content">
-                <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
-                  <pre class="text-sm text-gray-100"><code>&lt;section class="modal_wrap bottom" id="modal_bottom_01"&gt;
-    &lt;div class="modal_box"&gt;
-      &lt;div class="modal_title"&gt;타이틀 위치&lt;/div&gt;
-      &lt;div class="modal_content"&gt;
-        &lt;div class="modal_text"&gt;
-          콘텐츠 위치 &lt;br&gt;
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut unde ea a, dignissimos nulla, suscipit officia possimus esse explicabo deleniti animi labore dolor ratione et molestiae totam inventore quas accusantium!
-        &lt;/div&gt;
-        &lt;button type="button" class="btn_base secondary lg w-full modal_close_btn"&gt;확인&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bottom modal Section -->
+        <section id="dialog_modal" class="mb-12">
+          <div class="bg-white rounded-lg shadow-sm p-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-3">다이얼로그 모달 | dialog modal</h2>
+            <p class="text-gray-600 mb-8"> <strong>다이얼로그 모달(Dialog Modal)은</strong> 화면 중앙에 표시되어 사용자의 주의를 집중시키고, 중요한 정보 전달이나 확인이 필요한 상황에서 사용됩니다. 제목, 본문, 버튼 등 다양한 콘텐츠를 포함할 수 있습니다.</p>
+
+            <div class="mb-10">
+              <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+                기본
+              </h3>
+              <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4 reative">
+                <div class="text-sm text-gray-700 mb-4 font-medium">Preview</div>
+                <!-- 기본  -->
+                <button type="button" class="btn_base primary lg w-full" data-modal="dialog_modal01"> 클릭</button>
+                <!-- modal_wrap 클래스에 .active 붙으면서 노출 -->
+                <div class="modal_wrap dialog_modal_wrap" id="dialog_modal01">
+                  <div class="modal_box sm"> <!-- sm md lg 크기 조정 -->
+                    <div class="modal_header">
+                      <h6 class="text-h6 modal_header_title">모달 타이틀</h6>
+                      <a href="#" class="modal_close_btn"><i class="ph ph-x"></i></a>
+                    </div>
+                    <div class="modal_content">
+                      <div class="modal_content_title">Title</div> 
+                      <div class="modal_text">
+                        대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+                      </div>
+                      <div class="modal_text">
+                        대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+                      </div>
+                    </div>
+                    <div class="modal_footer">
+                      <div class="flex gap-2">
+                        <button type="button" class="btn_base lg tertiary"><i class="ph ph-download-simple"></i>다운로드</button>
+                        <div class="check_field">
+                          <input id="modal_check_05" type="checkbox" class="check_base">
+                          <label for="modal_check_05" class="check_label">오늘 하루 보지 않기 </label>
+                        </div>
+                      </div>
+                      <div class="flex gap-2">
+                        <button type="button" class="btn_base lg secondary">저장</button>
+                        <button type="button" class="btn_base lg primary">닫기</button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <div class="dialog_modal_wrap" >
+                    <div class="modal_box sm" style="position: static; transform: translate(0);">
+                      <div class="modal_header">
+                        <h6 class="text-h6 modal_header_title">모달 타이틀</h6>
+                        <a href="#" class="modal_close_btn"><i class="ph ph-x"></i></a>
+                      </div>
+                      <div class="modal_content">
+                        <div class="modal_content_title">Title</div> 
+                        <div class="modal_text">
+                          대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+                        </div>
+                        <div class="modal_text">
+                          대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다. 
+                        </div>
+                      </div>
+                      <div class="modal_footer">
+                        <div class="flex gap-2">
+                          <button type="button" class="btn_base lg tertiary"><i class="ph ph-download-simple"></i>다운로드</button>
+                          <div class="check_field">
+                            <input id="modal_check_05" type="checkbox" class="check_base">
+                            <label for="modal_check_05" class="check_label">오늘 하루 보지 않기 </label>
+                          </div>
+                        </div>
+                        <div class="flex gap-2">
+                          <button type="button" class="btn_base lg secondary">저장</button>
+                          <button type="button" class="btn_base lg primary">닫기</button>
+                        </div>
+  
+                      </div>
+                    </div>
+                  </div> 
                 </div>
               </div>
             </div>
@@ -1597,16 +1690,32 @@
               <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
                 <div class="text-sm text-gray-700 mb-4 font-medium">Preview</div>
 
-                <section class="tab_wrap w-50">
-                  <ul class="tab_list">
-                    <!-- 활성화 버튼에 active 추가 -->
-                    <li data-tab="tab01" class="tab_item active"><a href="#" class="inner" onclick="return false">1번째 탭</a></li>
-                    <li data-tab="tab02" class="tab_item"><a href="#" class="inner" onclick="return false">2번째 탭</a></li>
-                  </ul>
-                  <!-- 탭이면 tab_panel추가 /활성화 탭에 active 추가 -->
-                  <div class="tab_panel active" id="tab01">1번</div>
-                  <div class="tab_panel" id="tab02">2번</div>
-                </section>
+                <div class="inline-flex items-start flex-col gap-4">
+                  <div class="text-sm text-gray-500 font-medium">Line</div>
+                  <section class="tab_wrap">
+                    <ul class="tab_list line">
+                      <!-- 활성화 버튼에 active 추가 -->
+                      <li data-tab="tab01" class="tab_item active"><a href="#" class="inner" onclick="return false">1번째 탭</a></li>
+                      <li data-tab="tab02" class="tab_item"><a href="#" class="inner" onclick="return false">2번째 탭</a></li>
+                    </ul>
+                    <!-- 탭이면 tab_panel추가 /활성화 탭에 active 추가 -->
+                    <div class="tab_panel active" id="tab01">1번</div>
+                    <div class="tab_panel" id="tab02">2번</div>
+                  </section>
+                  <div class="text-sm text-gray-500 font-medium">Fill</div>
+                  <section class="tab_wrap">
+                    <ul class="tab_list fill">
+                      <!-- 활성화 버튼에 active 추가 -->
+                      <li data-tab="tab03" class="tab_item active"><a href="#" class="inner" onclick="return false">3번째 탭</a></li>
+                      <li data-tab="tab04" class="tab_item"><a href="#" class="inner" onclick="return false">4번째 탭</a></li>
+                      <li data-tab="tab05" class="tab_item"><a href="#" class="inner" onclick="return false">5번째 탭</a></li>
+                    </ul>
+                    <!-- 탭이면 tab_panel추가 /활성화 탭에 active 추가 -->
+                    <div class="tab_panel active" id="tab03">3번</div>
+                    <div class="tab_panel" id="tab04">4번</div>
+                    <div class="tab_panel" id="tab05">5번</div>
+                  </section>
+                </div>
               </div>
               <div class="code_accordion_header">
                 <span>코드 보기</span>
@@ -1649,7 +1758,7 @@
                   <li class="card_item">
                     <a href="#" class="card_link">
                       <div class="card_head">
-                        <h4 class="badge_base text secondary sm">필독</h4>
+                        <h4 class="badge_base text primary out_line sm">필독</h4>
                         <p class="card_date">2024.01.15</p>
                       </div>
                       <div class="card_body">
@@ -1686,7 +1795,7 @@
     &lt;li class="card_item"&gt;
       &lt;a href="#" class="card_link"&gt;
         &lt;div class="card_head"&gt;
-          &lt;h4 class="badge_base text secondary sm"&gt;필독&lt;/h4&gt;
+          &lt;h4 class="badge_base text primary out_line sm"&gt;필독&lt;/h4&gt;
           &lt;p class="card_date"&gt;2024.01.15&lt;/p&gt;
         &lt;/div&gt;
         &lt;div class="card_body"&gt;
@@ -1729,8 +1838,6 @@
                           <th>테이블 헤더</th>
                           <th>테이블 헤더</th>
                           <th>테이블 헤더</th>
-                          <th>테이블 헤더</th>
-                          <th>테이블 헤더</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -1743,8 +1850,6 @@
                           <td>내용</td>
                           <td>내용</td>
                           <td>내용</td>
-                          <td>내용</td>
-                          <td>내용</td>
                         </tr>
                         <tr>
                           <td>내용</td>
@@ -1754,9 +1859,12 @@
                           <td>내용</td>
                           <td>내용</td>
                           <td>내용</td>
-                          <td>내용</td>
-                          <td>내용</td>
-                          <td>내용</td>
+                          <td>
+                            <div class="flex gap-2">
+                              <button type="button" class="btn_base sm tertiary">저장</button>
+                              <button type="button" class="btn_base sm tertiary">수정</button>
+                            </div>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -1826,11 +1934,12 @@
 
             <div class="mb-10">
               <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
-                숫자형 (크기)
+                숫자 (크기)
               </h3>
               <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
                 <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
                   <div class="flex items-center gap-3">
+                    <div class="badge_base primary dotted"></div>
                     <div class="badge_base primary xs">11</div>
                     <div class="badge_base primary sm">22</div>
                     <div class="badge_base primary md">33</div>
@@ -1844,23 +1953,37 @@
               <div class="code_accordion_content">
                 <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
                   <pre class="text-sm text-gray-100"><code>&lt;div class="badge_base primary xs"&gt;11&lt;/div&gt;
-  &lt;div class="badge_base primary sm"&gt;22&lt;/div&gt;
-  &lt;div class="badge_base primary md"&gt;33&lt;/div&gt;
-  &lt;div class="badge_base primary lg"&gt;44&lt;/div&gt;</code></pre>
+&lt;div class="badge_base primary sm"&gt;22&lt;/div&gt;
+&lt;div class="badge_base primary md"&gt;33&lt;/div&gt;
+&lt;div class="badge_base primary lg"&gt;44&lt;/div&gt;</code></pre>
                 </div>
               </div>
             </div>
             <div class="mb-10">
               <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
-                텍스트형 (스타일)
+                텍스트형
               </h3>
               <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
                 <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
-                  <div class="flex items-center gap-3">
-                    <div class="badge_base text primary sm">primary</div>
-                    <div class="badge_base text secondary sm">secondary</div>
-                    <div class="badge_base text tertiary md">tertiary</div>
-                    <div class="badge_base text disabled lg">disabled</div>
+                  <div class="flex items-center flex-wrap gap-3">
+                    <div class="flex flex-wrap gap-3">
+                      <div class="text-sm text-gray-500 font-medium w-full">primary (Brand)</div>
+                      <div class="badge_base text primary sm">primary</div>
+                      <div class="badge_base text primary out_line sm">primary outline</div>
+                      <div class="badge_base text primary pastel sm">primary solid pastel</div> 
+                      <div class="badge_base text primary md">primary</div>
+                      <div class="badge_base text primary out_line md">primary outline</div>
+                      <div class="badge_base text primary pastel md">primary solid pastel</div> 
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                      <div class="text-sm text-gray-500 font-medium w-full">Tertiary (Gray)</div>
+                      <div class="badge_base text tertiary sm">tertiary</div>
+                      <div class="badge_base text tertiary out_line sm">tertiary</div>
+                      <div class="badge_base text tertiary pastel sm">tertiary</div>
+                      <div class="badge_base text tertiary md">primary</div>
+                      <div class="badge_base text tertiary out_line md">primary outline</div>
+                      <div class="badge_base text tertiary pastel md">primary solid pastel</div> 
+                    </div>
                   </div>
               </div>
               <div class="code_accordion_header">
@@ -1870,26 +1993,59 @@
               <div class="code_accordion_content">
                 <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
                   <pre class="text-sm text-gray-100"><code>&lt;div class="badge_base text primary sm"&gt;primary&lt;/div&gt;
-  &lt;div class="badge_base text secondary sm"&gt;secondary&lt;/div&gt;
-  &lt;div class="badge_base text tertiary md"&gt;tertiary&lt;/div&gt;
-  &lt;div class="badge_base text disabled lg"&gt;disabled&lt;/div&gt;</code></pre>
+&lt;div class="badge_base text tertiary md"&gt;tertiary&lt;/div&gt;</code></pre>
                 </div>
               </div>
             </div>
             <div class="mb-10">
               <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
-                시스템
+                시스템 또는 색상
               </h3>
               <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
                 <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
-                  <div class="flex items-center gap-3">
+                <div class="flex items-center flex-wrap gap-3">
+                  <div class="flex flex-wrap gap-3 w-full">
+                    <div class="text-sm text-gray-500 font-medium w-full">Success & Green</div>
                     <div class="badge_base text success sm">Success</div>
-                    <div class="badge_base text error sm">Error</div>
-                    <div class="badge_base text pending sm">Pending</div>
-                    <div class="badge_base text warning sm">Warning</div>
-                    <div class="badge_base text info sm">Info</div>
-                    <div class="badge_base text neutral sm">Neutral</div>
+                    <div class="badge_base text success out_line sm">Success outline</div>
+                    <div class="badge_base text success pastel sm">Success solid pastel</div> 
+                    <div class="badge_base text success md">Success</div>
+                    <div class="badge_base text success out_line md">Success outline</div>
+                    <div class="badge_base text success pastel md">Success solid pastel</div> 
                   </div>
+                  <div class="flex flex-wrap gap-3 w-full">
+                    <div class="text-sm text-gray-500 font-medium w-full">Danger & Red</div>
+                    <div class="badge_base text danger sm">Danger</div>
+                    <div class="badge_base text danger out_line sm">Danger outline</div>
+                    <div class="badge_base text danger pastel sm">Danger solid pastel</div> 
+                    <div class="badge_base text danger md">Danger</div>
+                    <div class="badge_base text danger out_line md">Danger outline</div>
+                    <div class="badge_base text danger pastel md">Danger solid pastel</div> 
+                  </div>
+                  <div class="flex flex-wrap gap-3 w-full">
+                    <div class="text-sm text-gray-500 font-medium w-full">Information & Blue</div>
+                    <div class="badge_base text info sm">Information</div>
+                    <div class="badge_base text info out_line sm">Information outline</div>
+                    <div class="badge_base text info pastel sm">Information solid pastel</div> 
+                    <div class="badge_base text info md">Information</div>
+                    <div class="badge_base text info out_line md">Information outline</div>
+                    <div class="badge_base text info pastel md">Information solid pastel</div> 
+                  </div>
+                  <div class="flex flex-wrap gap-3 w-full">
+                    <div class="text-sm text-gray-500 font-medium w-full">warning & Yellow</div>
+                    <div class="badge_base text warning sm">warning</div>
+                    <div class="badge_base text warning out_line sm">warning outline</div>
+                    <div class="badge_base text warning pastel sm">warning solid pastel</div> 
+                    <div class="badge_base text warning md">warning</div>
+                    <div class="badge_base text warning out_line md">warning outline</div>
+                    <div class="badge_base text warning pastel md">warning solid pastel</div> 
+                  </div>
+                  <div class="flex flex-wrap gap-3 w-full">
+                    <div class="text-sm text-gray-500 font-medium w-full">disabled</div>
+                    <div class="badge_base text disabled sm">sm disabled</div>
+                    <div class="badge_base text disabled md">md disabled</div>
+                  </div>
+                </div>
               </div>
               <div class="code_accordion_header">
                 <span>코드 보기</span>
@@ -1898,11 +2054,42 @@
               <div class="code_accordion_content">
                 <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
                   <pre class="text-sm text-gray-100"><code>&lt;div class="badge_base text success sm"&gt;success&lt;/div&gt;
-  &lt;div class="badge_base text error sm"&gt;error&lt;/div&gt;
-  &lt;div class="badge_base text pending sm"&gt;pending&lt;/div&gt;
-  &lt;div class="badge_base text warning sm"&gt;warning&lt;/div&gt;
-  &lt;div class="badge_base text info sm"&gt;info&lt;/div&gt;
-  &lt;div class="badge_base text neutral sm"&gt;neutral&lt;/div&gt;</code></pre>
+&lt;div class="badge_base text danger sm"&gt;danger&lt;/div&gt;
+&lt;div class="badge_base text info sm"&gt;info&lt;/div&gt;
+&lt;div class="badge_base text warning sm"&gt;warning&lt;/div&gt;
+&lt;div class="badge_base text disabled sm"&gt;disabled&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--  tag Section -->
+        <section id="tag" class="mb-12">
+          <div class="bg-white rounded-lg shadow-sm p-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-3">태그 | Tag</h2>
+            <p class="text-gray-600 mb-8"><strong>태그(Tag)는</strong> 콘텐츠를 분류하고 필터링할 수 있도록 키워드나 레이블을 표시하는 데 사용되며, 사용자가 관련 정보를 빠르게 찾을 수 있도록 돕습니다.</p>
+            <div class="mb-10">
+              <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+                기본
+              </h3>
+              <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
+                <div class="text-sm text-gray-500 mb-4 font-medium">Preview</div>
+                  <div class="flex items-center gap-3">
+                    <div class="tag_base">태그<i class="ph ph-x"></i></div>
+                    <div class="tag_base md">태그<i class="ph ph-x"></i></div>
+                    <div class="tag_base">#태그</div>
+                    <div class="tag_base md">#태그</div>
+                    <div class="tag_base md disabled">#태그</div>
+                  </div>
+              </div>
+              <div class="code_accordion_header">
+                <span>코드 보기</span>
+                <i class="ph ph-caret-down code_accordion_icon"></i>
+              </div>
+              <div class="code_accordion_content">
+                <div class="bg-gray-900 rounded-lg p-5 overflow-x-auto">
+                  <pre class="text-sm text-gray-100"><code></code></pre>
                 </div>
               </div>
             </div>

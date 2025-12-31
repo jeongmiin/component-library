@@ -4,10 +4,11 @@
   /* ==================== */
   /* Height */
   /* ==================== */
-  --height-xs: 1.25rem;
-  --height-sm: 1.5rem;
-  --height-md: 2rem;
-  --height-lg: 2.75rem; 
+  --height-2xs: 1.25rem;
+  --height-xs: 1.5rem;
+  --height-sm: 2rem;
+  --height-md: 2.75rem; 
+  --height-lg: 3rem; 
   --height-xl: 3.5rem; 
   --height-2xl: 4.375rem;
   --height-3xl: 6.25rem;
@@ -111,8 +112,23 @@
   /* ==================== */
   /* Tab Component */
   /* ==================== */
-  --tab-text: var(--surface-700);
-  --tab-text-active: var(--primary-500);
+  /* 공통 */
+  --tab-text: var(--text-secondary);
+  --tab-bg: var(--bg-default);
+  --tab-bg-hover: var(--bg-primary);
+
+  /* Line 스타일 (밑줄) */
+  --tab-line-min-width: 5rem;
+  --tab-line-border: var(--border-secondary);
+  --tab-line-border-active: var(--border-brand);
+
+  /* Fill 스타일 (배경 채움) */
+  --tab-fill-min-width: 6.25rem;
+  --tab-fill-bg: var(--bg-secondary);
+  --tab-fill-bg-hover: var(--surface-200);
+  --tab-fill-bg-active: var(--bg-brand);
+  --tab-fill-text-active: var(--text-inverse);
+  --tab-fill-border: var(--border-secondary);
 
 
   /* ==================== */
@@ -185,25 +201,64 @@
   /* ==================== */
   /* Badge Component */
   /* ==================== */
-  /* Primary Badge */
-  --badge-primary-bg: var(--primary-500);     
-  --badge-primary-text: var(--wh);
+  /* Primary (Brand) */
+  --badge-primary-solid: var(--bg-brand);
+  --badge-primary-solid-text: var(--text-inverse);
+  --badge-primary-outline: var(--border-brand);
+  --badge-primary-outline-bg: var(--bg-brand-subtle);
+  --badge-primary-outline-text: var(--text-brand-strong);
+  --badge-primary-pastel: var(--bg-brand-subtle);
+  --badge-primary-pastel-text: var(--text-brand-strong);
 
-  /* Secondary Badge (아웃라인) */
-  --badge-secondary-bg: var(--primary-50);        
-  --badge-secondary-text: var(--primary-500);   
-  --badge-secondary-border: var(--primary-500); 
+  /* Gray (Tertiary) */
+  --badge-gray-solid: var(--surface-500);
+  --badge-gray-solid-text: var(--text-inverse);
+  --badge-gray-outline: var(--border-tertiary);
+  --badge-gray-outline-bg: var(--surface-50);
+  --badge-gray-outline-text: var(--text-secondary);
+  --badge-gray-pastel: var(--surface-100);
+  --badge-gray-pastel-text: var(--text-secondary);
 
-  /* Tertiary Badge (중성) */
-  --badge-tertiary-bg: var(--wh);
-  --badge-tertiary-text: var(--surface-600);
-  --badge-tertiary-border: var(--surface-200);
+  /* Red (Danger) */
+  --badge-red-solid: var(--bg-danger);
+  --badge-red-solid-text: var(--text-inverse);
+  --badge-red-outline: var(--border-danger);
+  --badge-red-outline-bg: var(--bg-danger-subtle);
+  --badge-red-outline-text: var(--text-danger);
+  --badge-red-pastel: var(--bg-danger-subtle);
+  --badge-red-pastel-text: var(--text-danger);
 
-  --badge-success: var(--green-300);
-  --badge-error: var(--red-300);
-  --badge-pending: var(--purple-200);
-  --badge-warning: var(--yellow-300);
-  --badge-info: var(--blue-300);
-  --badge-neutral: var(--surface-200);
+  /* Yellow (Warning) */
+  --badge-yellow-solid: var(--bg-warning);
+  --badge-yellow-solid-text: var(--text-primary);
+  --badge-yellow-outline: var(--border-warning);
+  --badge-yellow-outline-bg: var(--bg-warning-subtle);
+  --badge-yellow-outline-text: var(--text-warning);
+  --badge-yellow-pastel: var(--bg-warning-subtle);
+  --badge-yellow-pastel-text: var(--text-warning);
+
+  /* Green (Success) */
+  --badge-green-solid: var(--bg-success);
+  --badge-green-solid-text: var(--text-inverse);
+  --badge-green-outline: var(--border-success);
+  --badge-green-outline-bg: var(--bg-success-subtle);
+  --badge-green-outline-text: var(--text-success);
+  --badge-green-pastel: var(--bg-success-subtle);
+  --badge-green-pastel-text: var(--text-success);
+
+  /* Blue (Information) */
+  --badge-blue-solid: var(--bg-information);
+  --badge-blue-solid-text: var(--text-inverse);
+  --badge-blue-outline: var(--border-information);
+  --badge-blue-outline-bg: var(--bg-information-subtle);
+  --badge-blue-outline-text: var(--text-information);
+  --badge-blue-pastel: var(--bg-information-subtle);
+  --badge-blue-pastel-text: var(--text-information);
+
+  --tag-bg: var(--wh);
+  --tag-text: var(--surface-700);
+  --tag-border: var(--surface-200);
+  --tag-bg-hover: var(--surface-50);
+  --tag-bg-active: var(--surface-100);
 
 }

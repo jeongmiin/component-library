@@ -118,9 +118,9 @@ html { font-size: clamp(12px, 1.5vw, 16px); }
 --text-disabled: 비활성 텍스트
 
 /* System Heights */
---height-sm: 1.5rem;
---height-md: 2rem;
---height-lg: 2.75rem;
+--height-xs: 1.5rem;
+--height-sm: 2rem;
+--height-md: 2.75rem;
 --height-xl: 3.5rem;
 
 /* Spacing */
@@ -262,5 +262,3 @@ MIT License
 이슈 및 PR은 언제든 환영합니다!
 
 ---
-
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
