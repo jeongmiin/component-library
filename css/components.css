@@ -20,6 +20,8 @@
 .text-xs{font-size: var(--text-xs);}
 .text-2xs{font-size: var(--text-2xs);}
 
+.text-desc{font-size: var(--text-sm); color: var(--text-tertiary);}
+
 /* icon */
 .icon_sm{display: flex; align-items: center; justify-content: center; font-size: var(--text-xs); width: var(--space-md); height: var(--space-md);}
 .icon_md{display: flex; align-items: center; justify-content: center; font-size: var(--text-base); width: var(--space-xl); height: var(--space-xl);}
@@ -382,7 +384,7 @@ textarea.input_base { display: block; height: auto; min-height: var(--height-4xl
 /* Card                 */
 /* ==================== */
 .card_list{ display: flex; flex-direction: column; gap: var(--space-lg);}
-.card_item{ background-color: var(--bg-default); box-shadow: var(--shadow-primary); border-radius: var(--rounded-md); transition: all 0.2s; border: 1px solid var(--border-tertiary);}
+.card_item{ background-color: var(--bg-default); box-shadow: var(--shadow-primary); border-radius: var(--rounded-md); transition: all 0.2s; border: 1px solid var(--border-primary);}
 .card_link{ display: flex; flex-direction: column; padding: var(--space-md);}
 .card_head{ display: flex; align-items: center; justify-content: space-between; padding-bottom: var(--space-xs); margin-bottom: var(--space-xs); border-bottom: 1px solid var(--border-primary);}
 .card_date{ font-size: var(--text-xs); color: var(--text-secondary); margin-left: auto;}
@@ -390,6 +392,12 @@ textarea.input_base { display: block; height: auto; min-height: var(--height-4xl
 .card_title{ font-size: var(--text-sm); color: var(--text-primary); flex: 1;}
 .card_icon{ display: flex; align-items: center; justify-content: center; width: var(--space-2xl); height: var(--space-2xl); background-color: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--rounded-circle);}
 .card_icon span{ font-size: var(--text-sm); color: var(--text-secondary); line-height: var(--leading-base); padding-left: var(--space-4xs);}
+.card_footer{display: flex; flex-wrap: wrap; padding-top: var(--space-xl); margin-top: var(--space-xl); border-top: 1px solid var(--border-primary); gap: var(--space-xs);}
+
+/* info */
+.card_info{padding: var(--space-3xl);}
+.card_info .card_head{flex-direction: column; align-items: flex-start; gap: var(--space-xl); padding-bottom: var(--space-xl); margin-bottom: var(--space-xl);}
+.card_info .card_body{flex-direction: column; align-items: flex-start; word-break: keep-all;}
 
 
 /* ==================== */
